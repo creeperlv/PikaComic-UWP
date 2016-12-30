@@ -208,3 +208,8 @@ E:\UWP\BK20\BK20\obj\x86\Debug\BlankPage.g.i.cs
 E:\UWP\BK20\BK20\obj\x86\Debug\BlankPage.g.cs
 E:\UWP\BK20\BK20\obj\x86\Debug\BlankPage.xaml
 E:\UWP\BK20\BK20\obj\x86\Debug\BlankPage.xbf
+E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.g.i.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.g.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.xaml
+E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.xbf
+E:\UWP\BK20\BK20\bin\x86\Debug\InfoPage.xbf

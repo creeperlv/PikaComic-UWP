@@ -172,27 +172,39 @@ namespace BK20
         }
 
 
-        WebClientClass wc;
         private async void GetInfo()
         {
             try
             {
                 //pr_Load.Visibility = Visibility.Visible;
-                wc = new WebClientClass();
-                string results = await wc.GetResults(new Uri("https://picaapi.picacomic.com/categories"));
+                string results = await WebClientClass.GetResults(new Uri("https://picaapi.picacomic.com/categories"));
                 CategoriesModel list = JsonConvert.DeserializeObject<CategoriesModel>(results);
-                List<CategoriesModel> ls = new List<CategoriesModel>();
-                ls.Add(new CategoriesModel() { title = "支持哔咔", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_support.jpg" } });
-                ls.Add(new CategoriesModel() { title = "哔咔聊天室", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_love_pica.jpg" } });
-                ls.Add(new CategoriesModel() { title= "哔咔排行榜",thumb=new CategoriesModel() {image= "ms-appx:///Assets/Cat/cat_leaderboard.jpg" } });
-                ls.Add(new CategoriesModel() { title = "隨機本子", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_random.jpg" } });
-                ls.Add(new CategoriesModel() { title = "最近更新", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_latest.jpg" } });
-                list.data.categories.InsertRange(0, ls);
-                gv_Cat.ItemsSource = list.data.categories;
+                if (list.code == 200)
+                {
+                    List<CategoriesModel> ls = new List<CategoriesModel>();
+                    ls.Add(new CategoriesModel() { title = "支持哔咔", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_support.jpg" } });
+                    ls.Add(new CategoriesModel() { title = "哔咔聊天室", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_love_pica.jpg" } });
+                    ls.Add(new CategoriesModel() { title = "哔咔排行榜", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_leaderboard.jpg" } });
+                    ls.Add(new CategoriesModel() { title = "隨機本子", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_random.jpg" } });
+                    ls.Add(new CategoriesModel() { title = "最近更新", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_latest.jpg" } });
+                    list.data.categories.InsertRange(0, ls);
+                    gv_Cat.ItemsSource = list.data.categories;
+                }
+                else
+                {
+                    messShow.Show(list.message,3000);
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-               messShow.Show("加载失败，翻墙后试试？", 3000);
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("检查你的网络连接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("读取信息失败了，挂个VPN试试？", 3000);
+                }
             }
             finally
             {
@@ -204,8 +216,7 @@ namespace BK20
             try
             {
                 //pr_Load.Visibility = Visibility.Visible;
-                wc = new WebClientClass();
-                string results = await wc.GetResults(new Uri("https://picaapi.picacomic.com/keywords"));
+                string results = await WebClientClass.GetResults(new Uri("https://picaapi.picacomic.com/keywords"));
                 KeywordModel list = JsonConvert.DeserializeObject<KeywordModel>(results);
                 list_Hot.ItemsSource = list.data.ls;
             }

@@ -10,14 +10,14 @@ using Windows.Web.Http;
 
 namespace BK20
 {
-    class WebClientClass
+    public class WebClientClass
     {
         public WebClientClass()
         {
             //Encoding.RegisterProvider(provider);
           
         }
-        public async Task<string> GetResults(Uri url)
+        public static async Task<string> GetResults(Uri url)
         {
                 using (HttpClient hc = new HttpClient())
                 {
@@ -35,7 +35,7 @@ namespace BK20
                 }
         }
 
-        public async Task<IBuffer> GetBuffer(Uri url)
+        public static async Task<IBuffer> GetBuffer(Uri url)
         {
             using (HttpClient hc = new HttpClient())
             {
@@ -46,7 +46,7 @@ namespace BK20
             }
         }
 
-        public async Task<string> PostResults(Uri url, string PostContent)
+        public static async Task<string> PostResults(Uri url, string PostContent)
         {
             try
             {
@@ -65,7 +65,7 @@ namespace BK20
             }
         }
 
-        public async Task<string> GetResultsUTF8Encode(Uri url)
+        public static async Task<string> GetResultsUTF8Encode(Uri url)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace BK20
                 return "";
             }
         }
-        public async Task<string> GetResultsUTF8Encode_Phone(Uri url)
+        public static async Task<string> GetResultsUTF8Encode_Phone(Uri url)
         {
             try
             {
@@ -104,7 +104,7 @@ namespace BK20
             }
         }
 
-        public async Task<string> GetResultsGBKEncode(Uri url)
+        public static async Task<string> GetResultsGBKEncode(Uri url)
         {
             try
             {
@@ -129,24 +129,5 @@ namespace BK20
        
     }
 
-    public class DHModel
-    {
-        public object result { get; set; }
-        public object list { get; set; }
-
-        public object recommends { get; set; }
-        public string aid { get; set; }
-        public string title { get; set; }
-        public string play { get; set; }
-        public string video_review { get; set; }
-        public string mid { get; set; }
-        public string pic { get; set; }
-        public string author { get; set; }
-
-        public object banners { get; set; }
-        public string img { get; set; }
-
-        public object news { get; set; }
-
-    }
+ 
 }

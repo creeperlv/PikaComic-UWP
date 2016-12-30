@@ -28,13 +28,13 @@
     <AppXManifest Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-29T13:00:45.719</Modified>
+      <Modified>2016-12-30T13:03:45.407</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.exe">
       <PackagePath>entrypoint\BK20.exe</PackagePath>
-      <Modified>2016-12-29T13:00:45.052</Modified>
+      <Modified>2016-12-30T13:03:45.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xiaoyaocz\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -454,177 +454,177 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_end.jpg">
       <PackagePath>Assets\Cat\cat_end.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.832</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_latest.jpg">
       <PackagePath>Assets\Cat\cat_latest.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.833</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_leaderboard.jpg">
       <PackagePath>Assets\Cat\cat_leaderboard.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.836</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_least_viewed.jpg">
       <PackagePath>Assets\Cat\cat_least_viewed.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.837</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_love_pica.jpg">
       <PackagePath>Assets\Cat\cat_love_pica.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.838</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_most_viewed.jpg">
       <PackagePath>Assets\Cat\cat_most_viewed.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.839</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_random.jpg">
       <PackagePath>Assets\Cat\cat_random.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.840</Modified>
+      <Modified>2016-12-30T11:02:01.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_support.jpg">
       <PackagePath>Assets\Cat\cat_support.jpg</PackagePath>
-      <Modified>2016-12-29T12:08:10.831</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_10_big.png">
       <PackagePath>Assets\Login\loading_10_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.443</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_1_big.png">
       <PackagePath>Assets\Login\loading_1_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.444</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_2_big.png">
       <PackagePath>Assets\Login\loading_2_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.447</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_3_big.png">
       <PackagePath>Assets\Login\loading_3_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.449</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_4_big.png">
       <PackagePath>Assets\Login\loading_4_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.450</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_5_big.png">
       <PackagePath>Assets\Login\loading_5_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.451</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_6_big.png">
       <PackagePath>Assets\Login\loading_6_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.453</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_7_big.png">
       <PackagePath>Assets\Login\loading_7_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.454</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_8_big.png">
       <PackagePath>Assets\Login\loading_8_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.455</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_9_big.png">
       <PackagePath>Assets\Login\loading_9_big.png</PackagePath>
-      <Modified>2016-12-29T12:41:04.457</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\splash_title_new.png">
       <PackagePath>Assets\Login\splash_title_new.png</PackagePath>
-      <Modified>2016-12-29T12:42:07.485</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\register_name.png">
       <PackagePath>Assets\register_name.png</PackagePath>
-      <Modified>2016-12-29T11:29:44.458</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\splash_title_new.png">
       <PackagePath>Assets\splash_title_new.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.231</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_cat_pink.png">
       <PackagePath>Assets\tab_btn_cat_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.232</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_cat_white.png">
       <PackagePath>Assets\tab_btn_cat_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.234</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_game_pink.png">
       <PackagePath>Assets\tab_btn_game_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.235</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_game_white.png">
       <PackagePath>Assets\tab_btn_game_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.236</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_home_pink.png">
       <PackagePath>Assets\tab_btn_home_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.238</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_home_white.png">
       <PackagePath>Assets\tab_btn_home_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.239</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_member_pink.png">
       <PackagePath>Assets\tab_btn_member_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.240</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_member_white.png">
       <PackagePath>Assets\tab_btn_member_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.241</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_setting_pink.png">
       <PackagePath>Assets\tab_btn_setting_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.242</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_setting_white.png">
       <PackagePath>Assets\tab_btn_setting_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.243</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_shop_pink.png">
       <PackagePath>Assets\tab_btn_shop_pink.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.245</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\tab_btn_shop_white.png">
       <PackagePath>Assets\tab_btn_shop_white.png</PackagePath>
-      <Modified>2016-12-28T12:45:31.229</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T09:22:56.000</Modified>
+      <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2016-12-28T12:25:53.978</Modified>
+      <Modified>2016-12-30T11:02:01.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.xr.xml">
       <PackagePath>BK20.xr.xml</PackagePath>
-      <Modified>2016-12-29T12:55:50.161</Modified>
+      <Modified>2016-12-30T13:02:22.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -633,11 +633,11 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-29T13:00:45.543</Modified>
+      <Modified>2016-12-30T13:02:58.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\BK20.exe">
       <PackagePath>BK20.exe</PackagePath>
-      <Modified>2016-12-29T13:00:45.714</Modified>
+      <Modified>2016-12-30T13:03:45.400</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
