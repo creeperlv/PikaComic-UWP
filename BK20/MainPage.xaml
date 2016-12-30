@@ -1,0 +1,166 @@
+﻿<Page
+    x:Class="BK20.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BK20"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:WrapPanel="using:AppArrange.WrapPanel"
+    mc:Ignorable="d">
+    <Grid Background="#FFF0F0F0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="co1" MaxWidth="500"/>
+            <ColumnDefinition x:Name="co"/>
+        </Grid.ColumnDefinitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="wide">
+                <VisualState x:Name="w1">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="701"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="grid_o.BorderThickness" Value="0 0 1 0"></Setter>
+                        <Setter Target="co.Width" Value="*"></Setter>
+                        <Setter Target="frame.(Grid.Column)" Value="1"></Setter>
+                        <Setter Target="co1.MaxWidth" Value="500"></Setter>
+                        <Setter Target="bg.Visibility" Value="Visible"></Setter>
+                      
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="w2">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="grid_o.BorderThickness" Value="0"></Setter>
+                        <Setter Target="frame.(Grid.Column)" Value="0"></Setter>
+                        <Setter Target="co.Width" Value="auto"></Setter>
+                        <Setter Target="co1.MaxWidth" Value="800"></Setter>
+                        <Setter Target="bg.Visibility" Value="Collapsed"></Setter>
+                       
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid Background="#FFF0F0F0" x:Name="grid_o" BorderThickness="0 0 1 0" BorderBrush="#FFFF79BC">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Height="48" Background="#FFFF79BC">
+                <TextBlock Margin="10,0" x:Name="txt_Header" VerticalAlignment="Center" Foreground="White">首页</TextBlock>
+            </Grid>
+            <Pivot Style="{StaticResource PivotStyle1}" SizeChanged="main_Home_SizeChanged" Padding="0" Grid.Row="1" x:Name="main_Home" SelectionChanged="main_Home_SelectionChanged">
+                <PivotItem Margin="0">1</PivotItem>
+                <PivotItem Margin="0">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Style="{StaticResource ScrollViewerStyle1}">
+                        <StackPanel>
+                            <StackPanel Background="White">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                                    <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">搜索</TextBlock>
+                                </StackPanel>
+                                <AutoSuggestBox Margin="5" QueryIcon="Find" PlaceholderText="輸入搜索關鍵字"></AutoSuggestBox>
+                                <GridView x:Name="list_Hot" Margin="5 0" Height="100" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollMode="Disabled" IsItemClickEnabled="True" SelectionMode="None" >
+                                    <GridView.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel:WrapPanel/>
+                                        </ItemsPanelTemplate>
+                                    </GridView.ItemsPanel>
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#FFFF79BC" CornerRadius="8" >
+                                                <TextBlock Margin="10 5" Foreground="White" FontSize="14" Text="{Binding keyword}"/>
+                                            </Border>
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </StackPanel>
+                            <StackPanel  Background="White" Margin="0 10">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                                    <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC" FontSize="16">熱門分類</TextBlock>
+                                </StackPanel>
+                                <Border x:Name="ViewBox_num" Background="Gray" Width="100" VerticalAlignment="Top"/>
+                                <GridView x:Name="gv_Cat" SelectionMode="None" IsItemClickEnabled="True" ItemClick="gv_Cat_ItemClick">
+                                    <GridView.ItemContainerStyle>
+                                        <Style TargetType="GridViewItem">
+                                            <Setter Property="Margin" Value="5"/>
+                                        </Style>
+                                    </GridView.ItemContainerStyle>
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate>
+
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition Height="40"/>
+                                                </Grid.RowDefinitions>
+                                                <Image Source="{Binding Path=thumb.image}" Width="{Binding Width, ElementName=ViewBox_num}" Height="{Binding Width, ElementName=ViewBox_num}" VerticalAlignment="Top" Stretch="UniformToFill"/>
+                                                <TextBlock Grid.Row="1" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Center" TextAlignment="Center" MaxLines="2" TextTrimming="CharacterEllipsis" >
+								<Run Text="{Binding title}"/>
+                                                </TextBlock>
+                                            </Grid>
+
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </StackPanel>
+
+
+                        </StackPanel>
+
+                    </ScrollViewer>
+                </PivotItem>
+                <PivotItem Margin="0">3</PivotItem>
+                <PivotItem Margin="0">4</PivotItem>
+            </Pivot>
+            <Grid Grid.Row="2" Background="#FFFF79BC">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ToggleButton x:Name="btn_Home" HorizontalAlignment="Stretch" Height="56" Padding="0" Background="#00000000" Style="{StaticResource ToggleButtonStyle1}" Checked="btn_Home_Checked">
+                    <Image Source="Assets/tab_btn_home_white.png" ></Image>
+                </ToggleButton>
+                <ToggleButton x:Name="btn_Cat" HorizontalAlignment="Stretch" Height="56" Padding="0" Grid.Column="1" Background="#00000000" Style="{StaticResource ToggleButtonStyle1}" Checked="btn_Cat_Checked">
+                    <Image Source="Assets/tab_btn_cat_white.png" ></Image>
+                </ToggleButton>
+                <ToggleButton x:Name="btn_Member" HorizontalAlignment="Stretch" Height="56" Padding="0" Grid.Column="2"  Background="#00000000" Style="{StaticResource ToggleButtonStyle1}" Checked="btn_Member_Checked">
+                    <Image Source="Assets/tab_btn_member_white.png" ></Image>
+                </ToggleButton>
+                <ToggleButton x:Name="btn_Ssetting" HorizontalAlignment="Stretch" Height="56" Padding="0"  Grid.Column="3"  Background="#00000000" Style="{StaticResource ToggleButtonStyle1}" Checked="btn_Ssetting_Checked">
+                    <Image Source="Assets/tab_btn_setting_white.png" ></Image>
+                </ToggleButton>
+            </Grid>
+
+        </Grid>
+        <Grid x:Name="bg" Visibility="Visible" Grid.Column="1">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image x:Name="img_Hello" Source="Assets/Login/splash_title_new.png"  Height="250"></Image>
+                <TextBlock  Opacity="0.4" FontSize="18" Margin="10 20" HorizontalAlignment="Center" Visibility="Collapsed">欢迎使用哔哩哔哩动画</TextBlock>
+            </StackPanel>
+
+
+        </Grid>
+        <Frame x:Name="frame"  Grid.RowSpan="2"  Visibility="Collapsed" Navigated="frame_Navigated">
+            <Frame.ContentTransitions >
+                <TransitionCollection>
+                    <EdgeUIThemeTransition Edge="Right"/>
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+        <Frame x:Name="play_frame" Visibility="Collapsed"  Grid.RowSpan="2" Grid.ColumnSpan="2" Navigated="play_frame_Navigated">
+            <Frame.ContentTransitions >
+                <TransitionCollection>
+                    <EdgeUIThemeTransition Edge="Bottom"/>
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
+        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20" HorizontalAlignment="Center"></local:MessageShow>
+    </Grid>
+   
+</Page>
