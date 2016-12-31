@@ -22,7 +22,7 @@
             <TextBlock Margin="10,0" Grid.Column="1" x:Name="txt_Header" VerticalAlignment="Center" Foreground="White"></TextBlock>
         </Grid>
         <ScrollViewer Grid.Row="1" Style="{StaticResource ScrollViewerStyle1}" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="sv" ViewChanged="sv_ViewChanged">
-            <ListView x:Name="ls_items" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionMode="None" IsItemClickEnabled="True" ItemClick="ls_items_ItemClick">
+            <ListView x:Name="ls_items" ScrollViewer.VerticalScrollMode="Disabled"  ScrollViewer.VerticalScrollBarVisibility="Hidden"  SelectionMode="None" IsItemClickEnabled="True" ItemClick="ls_items_ItemClick">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -44,11 +44,11 @@
                                 <RowDefinition />
                                 <RowDefinition />
                             </Grid.RowDefinitions>
-                            <Image Height="100" Margin="0 0 5 0"  Grid.RowSpan="4" Source="{Binding Path=thumb.image}"></Image>
+                            <Image Height="100" MaxWidth="100" Margin="0 0 5 0"  Grid.RowSpan="4" Source="{Binding Path=thumb.image}" ></Image>
                             <TextBlock Grid.Column="1" FontSize="14"  VerticalAlignment="Center" TextWrapping="Wrap" MaxLines="2" Text="{Binding title}"></TextBlock>
                             <TextBlock Grid.Column="1" Grid.Row="1" FontSize="12" Foreground="Gray" VerticalAlignment="Center" Text="{Binding author}"></TextBlock>
-                            <TextBlock Grid.Column="1" Grid.Row="2" FontSize="12" Foreground="Gray"  VerticalAlignment="Center">共<Run Text="{Binding pagesCount}"/>P 分类<Run Text="{Binding cats}"/></TextBlock>
-                            <TextBlock Grid.Column="1" Grid.Row="3" FontSize="12" Foreground="Gray"  VerticalAlignment="Center">有<Run Text="{Binding likesCount}"/>人喜欢</TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" FontSize="12" Foreground="Gray"  VerticalAlignment="Center">共<Run Text="{Binding pagesCount}"/>P 分類:<Run Text="{Binding cats}"/></TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" FontSize="12" Foreground="Gray"  VerticalAlignment="Center">有<Run Text="{Binding likesCount}"/>人喜歡</TextBlock>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

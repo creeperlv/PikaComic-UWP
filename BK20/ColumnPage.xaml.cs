@@ -30,21 +30,46 @@ namespace BK20
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            txt_Header.Text = e.Parameter.ToString();
-            name = e.Parameter.ToString();
-            pageNum = 1;
-
-            if (name == "隨機本子")
+            if (e.NavigationMode== NavigationMode.New)
             {
-                LoadRandom();
+                txt_Header.Text = ((object[])e.Parameter)[0].ToString();
+                name = ((object[])e.Parameter)[0].ToString();
+                isSearch = (bool)((object[])e.Parameter)[1];
+                isUser = (bool)((object[])e.Parameter)[2];
+                pageNum = 1;
+                if (isSearch)
+                {
+                    LoadSearch();
+                }
+                else
+                {
+                    if (isUser)
+                    {
+                        name = ((object[])e.Parameter)[0].ToString().Split(',')[0];
+                        txt_Header.Text = ((object[])e.Parameter)[0].ToString().Split(',')[1];
+                        LoadUser();
+                    }
+                    else
+                    {
+                        if (name == "隨機本子")
+                        {
+                            LoadRandom();
+                        }
+                        else
+                        {
+                            LoadData();
+                        }
+                    }
+                    
+                }
             }
-            else
-            {
-                LoadData();
-            }
+          
+            
         }
         string name = "";
         bool loading = false;
+        bool isSearch = false;
+        bool isUser = false;
         int pageNum = 1;
         private async void LoadData()
         {
@@ -80,7 +105,7 @@ namespace BK20
                     }
                     else
                     {
-                        messShow.Show("没有更多了", 2000);
+                        messShow.Show("沒有更多了", 2000);
                     }
                 }
                 else
@@ -93,11 +118,117 @@ namespace BK20
             {
                 if (ex.HResult == -2147012867)
                 {
-                    messShow.Show("检查你的网络连接！", 3000);
+                    messShow.Show("檢查你的網絡連接！", 3000);
                 }
                 else
                 {
-                    messShow.Show("读取信息失败了，挂个VPN试试？", 3000);
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
+                }
+
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+                loading = false;
+            }
+
+        }
+        private async void LoadSearch()
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+                loading = true;
+                string uri = "";
+                if (pageNum == 1)
+                {
+                    ls_items.Items.Clear();
+                }
+
+                uri = string.Format("https://picaapi.picacomic.com/comics/search?page={1}&q={0}", Uri.EscapeDataString(name), pageNum);
+
+                string results = await WebClientClass.GetResults(new Uri(uri));
+                ComicsModel lists = JsonConvert.DeserializeObject<ComicsModel>(results);
+                if (lists.code == 200)
+                {
+                    if (lists.data.comics.docs.Count != 0)
+                    {
+                        lists.data.comics.docs.ForEach(x => ls_items.Items.Add(x));
+                        pageNum++;
+                    }
+                    else
+                    {
+                        messShow.Show("沒有更多了", 2000);
+                    }
+                }
+                else
+                {
+                    messShow.Show(lists.message, 2000);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
+                }
+
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+                loading = false;
+            }
+
+        }
+        private async void LoadUser()
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+                loading = true;
+                string uri = "";
+                if (pageNum == 1)
+                {
+                    ls_items.Items.Clear();
+                }
+
+                uri = string.Format("https://picaapi.picacomic.com/comics?page={1}&ca={0}", name, pageNum);
+
+                string results = await WebClientClass.GetResults(new Uri(uri));
+                ComicsModel lists = JsonConvert.DeserializeObject<ComicsModel>(results);
+                if (lists.code == 200)
+                {
+                    if (lists.data.comics.docs.Count != 0)
+                    {
+                        lists.data.comics.docs.ForEach(x => ls_items.Items.Add(x));
+                        pageNum++;
+                    }
+                    else
+                    {
+                        messShow.Show("沒有更多了", 2000);
+                    }
+                }
+                else
+                {
+                    messShow.Show(lists.message, 2000);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
                 }
 
             }
@@ -133,7 +264,7 @@ namespace BK20
                     }
                     else
                     {
-                        messShow.Show("没有更多了", 2000);
+                        messShow.Show("沒有更多了", 2000);
                     }
                 }
                 else
@@ -146,11 +277,11 @@ namespace BK20
             {
                 if (ex.HResult == -2147012867)
                 {
-                    messShow.Show("检查你的网络连接！", 3000);
+                    messShow.Show("檢查你的網絡連接！", 3000);
                 }
                 else
                 {
-                    messShow.Show("读取信息失败了，挂个VPN试试？", 3000);
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
                 }
 
             }
@@ -175,31 +306,51 @@ namespace BK20
             {
                 if (!loading)
                 {
-                    if (name == "隨機本子")
+                    if (isSearch)
                     {
-                        LoadRandom();
+                        LoadSearch();
                     }
                     else
                     {
-                        LoadData();
+                        if (isUser)
+                        {
+                           
+                            LoadUser();
+                        }
+                        else
+                        {
+                            if (name == "隨機本子")
+                            {
+                                LoadRandom();
+                            }
+                            else
+                            {
+                                LoadData();
+                            }
+                        }
+
                     }
+
+
+                    
                 }
             }
         }
 
         private void ls_items_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (name == "隨機本子")
+            if (e.ClickedItem is RandomModel)
             {
-                MessageCenter.SendNavigateTo(NavigateMode.Info, typeof(InfoPage),new object[] {(e.ClickedItem as RandomModel)._id });
+                MessageCenter.SendNavigateTo(NavigateMode.Info, typeof(InfoPage), new object[] { (e.ClickedItem as RandomModel)._id });
             }
             else
             {
                 MessageCenter.SendNavigateTo(NavigateMode.Info, typeof(InfoPage), new object[] { (e.ClickedItem as ComicsModel)._id });
             }
+
         }
 
-      
+
     }
     public class ComicsModel
     {

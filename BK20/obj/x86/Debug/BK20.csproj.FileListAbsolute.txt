@@ -213,3 +213,8 @@ E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.g.cs
 E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.xaml
 E:\UWP\BK20\BK20\obj\x86\Debug\InfoPage.xbf
 E:\UWP\BK20\BK20\bin\x86\Debug\InfoPage.xbf
+E:\UWP\BK20\BK20\obj\x86\Debug\ViewPage.g.i.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\ViewPage.g.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\ViewPage.xaml
+E:\UWP\BK20\BK20\obj\x86\Debug\ViewPage.xbf
+E:\UWP\BK20\BK20\bin\x86\Debug\ViewPage.xbf

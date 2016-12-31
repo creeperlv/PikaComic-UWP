@@ -28,13 +28,13 @@
     <AppXManifest Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T13:03:45.407</Modified>
+      <Modified>2016-12-30T17:08:01.270</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.exe">
       <PackagePath>entrypoint\BK20.exe</PackagePath>
-      <Modified>2016-12-30T13:03:45.167</Modified>
+      <Modified>2016-12-30T17:08:01.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xiaoyaocz\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -484,6 +484,10 @@
       <PackagePath>Assets\Cat\cat_support.jpg</PackagePath>
       <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\banner_web_demo.png">
+      <PackagePath>Assets\Login\banner_web_demo.png</PackagePath>
+      <Modified>2016-12-30T14:10:59.458</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_10_big.png">
       <PackagePath>Assets\Login\loading_10_big.png</PackagePath>
       <Modified>2016-12-30T11:02:01.107</Modified>
@@ -624,7 +628,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.xr.xml">
       <PackagePath>BK20.xr.xml</PackagePath>
-      <Modified>2016-12-30T13:02:22.447</Modified>
+      <Modified>2016-12-30T16:50:21.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -633,11 +637,11 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T13:02:58.308</Modified>
+      <Modified>2016-12-30T17:04:15.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\BK20.exe">
       <PackagePath>BK20.exe</PackagePath>
-      <Modified>2016-12-30T13:03:45.400</Modified>
+      <Modified>2016-12-30T17:08:01.264</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -361,6 +361,9 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Cat\cat_support.jpg">
       <PackagePath>Assets\Cat\cat_support.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\banner_web_demo.png">
+      <PackagePath>Assets\Login\banner_web_demo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_10_big.png">
       <PackagePath>Assets\Login\loading_10_big.png</PackagePath>
     </AppxPackagedFile>

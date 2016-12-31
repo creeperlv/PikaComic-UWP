@@ -112,6 +112,9 @@
     </Compile>
     <Compile Include="OrientedSize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewPage.xaml.cs">
+      <DependentUpon>ViewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WrapPanel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +132,7 @@
     <Content Include="Assets\Cat\cat_most_viewed.jpg" />
     <Content Include="Assets\Cat\cat_random.jpg" />
     <Content Include="Assets\Cat\cat_support.jpg" />
+    <Content Include="Assets\Login\banner_web_demo.png" />
     <Content Include="Assets\Login\loading_10_big.png" />
     <Content Include="Assets\Login\loading_1_big.png" />
     <Content Include="Assets\Login\loading_2_big.png" />
@@ -187,6 +191,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

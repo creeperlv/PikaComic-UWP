@@ -49,10 +49,71 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid Height="48" Background="#FFFF79BC">
-                <TextBlock Margin="10,0" x:Name="txt_Header" VerticalAlignment="Center" Foreground="White">首页</TextBlock>
+                <TextBlock Margin="10,0" x:Name="txt_Header" VerticalAlignment="Center" Foreground="White">首頁</TextBlock>
             </Grid>
             <Pivot Style="{StaticResource PivotStyle1}" SizeChanged="main_Home_SizeChanged" Padding="0" Grid.Row="1" x:Name="main_Home" SelectionChanged="main_Home_SelectionChanged">
-                <PivotItem Margin="0">1</PivotItem>
+                <PivotItem Margin="0">
+                    <ScrollViewer x:Name="sv_home" ViewChanged="sv_home_ViewChanged" Style="{StaticResource ScrollViewerStyle1}" VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <StackPanel Background="White">
+                                <Viewbox  Grid.Column="1" >
+                                    <FlipView  x:Name="home_flipView"  Height="180" Width="400" Grid.Column="1"   VerticalAlignment="Top" >
+                                        <FlipViewItem>
+
+                                            <HyperlinkButton Padding="0"  Click="HyperlinkButton_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                                <Grid>
+                                                    <Image  Source="Assets/Login/banner_web_demo.png"  Height="180" />
+                                                    <Grid Background="#CCFF79BC"  VerticalAlignment="Bottom">
+                                                        <TextBlock Margin="10 5" FontSize="14" Foreground="White">歡迎使用嗶咔漫畫哦</TextBlock>
+                                                    </Grid>
+                                                </Grid>
+                                            </HyperlinkButton>
+                                        </FlipViewItem>
+                                    </FlipView>
+                                </Viewbox>
+                               
+                            </StackPanel>
+                            <StackPanel Background="White" Margin="0 10">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                                    <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">公告</TextBlock>
+
+                                </StackPanel>
+                                <ListView x:Name="ls_items" ScrollViewer.VerticalScrollMode="Disabled"  ScrollViewer.VerticalScrollBarVisibility="Hidden"  SelectionMode="None" IsItemClickEnabled="True" ItemClick="ls_items_ItemClick">
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                            <Setter Property="Padding" Value="5 10"></Setter>
+                                            <Setter Property="Height" Value="92"></Setter>
+                                            <Setter Property="BorderThickness" Value="0  1"></Setter>
+                                            <Setter Property="BorderBrush" Value="#66808080"></Setter>
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="auto"/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="auto"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Image Width="72" Height="72" Grid.RowSpan="2" Margin="0 0 5 0" Source="{Binding Path=thumb.image}" Stretch="UniformToFill"></Image>
+                                                <TextBlock Grid.Column="1" VerticalAlignment="Top" TextTrimming="CharacterEllipsis" Text="{Binding title}"></TextBlock>
+                                                <TextBlock Grid.Column="1"  FontSize="14" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" MaxLines="2" Grid.Row="1" TextWrapping="Wrap" Foreground="Gray" Text="{Binding content}"></TextBlock>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackPanel>
+
+                            <HyperlinkButton x:Name="btn_laodMore" Click="btn_laodMore_Click" HorizontalAlignment="Center" Foreground="#CCFF79BC">加載更多</HyperlinkButton>
+                        </StackPanel>
+                    </ScrollViewer>
+                
+                </PivotItem>
                 <PivotItem Margin="0">
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Style="{StaticResource ScrollViewerStyle1}">
                         <StackPanel>
@@ -61,8 +122,8 @@
                                     <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
                                     <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">搜索</TextBlock>
                                 </StackPanel>
-                                <AutoSuggestBox Margin="5" QueryIcon="Find" PlaceholderText="輸入搜索關鍵字"></AutoSuggestBox>
-                                <GridView x:Name="list_Hot" Margin="5 0" Height="100" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollMode="Disabled" IsItemClickEnabled="True" SelectionMode="None" >
+                                <AutoSuggestBox x:Name="txt_Search" Margin="5" QueryIcon="Find" PlaceholderText="輸入搜索關鍵字" QuerySubmitted="AutoSuggestBox_QuerySubmitted"></AutoSuggestBox>
+                                <GridView x:Name="list_Hot" Margin="5 0" Height="100" ItemClick="list_Hot_ItemClick" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden"  IsItemClickEnabled="True" SelectionMode="None" >
                                     <GridView.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <WrapPanel:WrapPanel/>
@@ -83,7 +144,7 @@
                                     <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC" FontSize="16">熱門分類</TextBlock>
                                 </StackPanel>
                                 <Border x:Name="ViewBox_num" Background="Gray" Width="100" VerticalAlignment="Top"/>
-                                <GridView x:Name="gv_Cat" SelectionMode="None" IsItemClickEnabled="True" ItemClick="gv_Cat_ItemClick">
+                                <GridView x:Name="gv_Cat" SelectionMode="None" IsItemClickEnabled="True" ItemClick="gv_Cat_ItemClick" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
                                     <GridView.ItemContainerStyle>
                                         <Style TargetType="GridViewItem">
                                             <Setter Property="Margin" Value="5"/>
@@ -160,6 +221,7 @@
                 </TransitionCollection>
             </Frame.ContentTransitions>
         </Frame>
+        <ProgressRing x:Name="pr_Load" Visibility="Collapsed" Grid.RowSpan="4" Width="56" Height="56" IsActive="True" Foreground="#FFFF79BC"></ProgressRing>
         <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20" HorizontalAlignment="Center"></local:MessageShow>
     </Grid>
    
