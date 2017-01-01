@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>F153D78E3D5383FDF50FFAA495400276D002F3287C446F3DE0A55ED2E041874D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>FAD27A2D47728A895732CEB0757D1F3E47347034CD635B73014C5E67ABCAE421</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>808c0824-2e5f-44b9-8664-7c2ffe2a4dec_1.0.0.0_x86__a5x6jjv384fej</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>808c0824-2e5f-44b9-8664-7c2ffe2a4dec_a5x6jjv384fej!App</RegisteredUserModeAppID>
     <RegisteredPackageID>808c0824-2e5f-44b9-8664-7c2ffe2a4dec</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T17:08:01.270</Modified>
+      <Modified>2017-01-01T14:42:02.907</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.exe">
       <PackagePath>entrypoint\BK20.exe</PackagePath>
-      <Modified>2016-12-30T17:08:01.079</Modified>
+      <Modified>2017-01-01T14:42:02.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xiaoyaocz\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -484,9 +484,21 @@
       <PackagePath>Assets\Cat\cat_support.jpg</PackagePath>
       <Modified>2016-12-30T11:02:01.107</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\splash_bg_1_blur.jpg">
+      <PackagePath>Assets\Login\splash_bg_1_blur.jpg</PackagePath>
+      <Modified>2016-12-31T17:30:15.232</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\banner_web_demo.png">
       <PackagePath>Assets\Login\banner_web_demo.png</PackagePath>
       <Modified>2016-12-30T14:10:59.458</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\icon_exclamation_error.png">
+      <PackagePath>Assets\Login\icon_exclamation_error.png</PackagePath>
+      <Modified>2017-01-01T08:08:47.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\icon_punch_in.png">
+      <PackagePath>Assets\Login\icon_punch_in.png</PackagePath>
+      <Modified>2017-01-01T08:16:52.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\loading_10_big.png">
       <PackagePath>Assets\Login\loading_10_big.png</PackagePath>
@@ -528,9 +540,217 @@
       <PackagePath>Assets\Login\loading_9_big.png</PackagePath>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\logo_round.png">
+      <PackagePath>Assets\Login\logo_round.png</PackagePath>
+      <Modified>2017-01-01T08:10:04.572</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\NewStoreLogo.scale-100.png">
+      <PackagePath>Assets\Login\NewStoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\NewStoreLogo.scale-125.png">
+      <PackagePath>Assets\Login\NewStoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.780</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\NewStoreLogo.scale-150.png">
+      <PackagePath>Assets\Login\NewStoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.907</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\NewStoreLogo.scale-200.png">
+      <PackagePath>Assets\Login\NewStoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\NewStoreLogo.scale-400.png">
+      <PackagePath>Assets\Login\NewStoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:07.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\placeholder_transparent.png">
+      <PackagePath>Assets\Login\placeholder_transparent.png</PackagePath>
+      <Modified>2017-01-01T08:18:45.950</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\splash_title_new.png">
       <PackagePath>Assets\Login\splash_title_new.png</PackagePath>
       <Modified>2016-12-30T11:02:01.123</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Login\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Login\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.930</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Login\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Login\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Login\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.963</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square310x310Logo.scale-100.png">
+      <PackagePath>Assets\Login\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square310x310Logo.scale-125.png">
+      <PackagePath>Assets\Login\Square310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.416</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square310x310Logo.scale-150.png">
+      <PackagePath>Assets\Login\Square310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square310x310Logo.scale-200.png">
+      <PackagePath>Assets\Login\Square310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.430</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square310x310Logo.scale-400.png">
+      <PackagePath>Assets\Login\Square310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Login\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Login\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.472</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Login\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.475</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Login\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.482</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Login\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.498</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.627</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.645</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.594</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.788</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.502</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-32_altform-unplated.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\Login\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.904</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Login\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square71x71Logo.scale-125.png">
+      <PackagePath>Assets\Login\Square71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.849</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square71x71Logo.scale-150.png">
+      <PackagePath>Assets\Login\Square71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.846</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Login\Square71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Login\Square71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:05.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Login\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.137</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Login\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Login\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.135</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Login\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.290</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Login\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Login\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-01-01T14:36:06.315</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\register_name.png">
       <PackagePath>Assets\register_name.png</PackagePath>
@@ -595,31 +815,26 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T11:02:01.123</Modified>
+      <Modified>2017-01-01T14:35:27.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-12-30T11:02:01.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\Properties\Default.rd.xml">
@@ -628,7 +843,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.xr.xml">
       <PackagePath>BK20.xr.xml</PackagePath>
-      <Modified>2016-12-30T16:50:21.238</Modified>
+      <Modified>2017-01-01T14:26:58.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -637,11 +852,11 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T17:04:15.148</Modified>
+      <Modified>2017-01-01T14:42:02.769</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\BK20.exe">
       <PackagePath>BK20.exe</PackagePath>
-      <Modified>2016-12-30T17:08:01.264</Modified>
+      <Modified>2017-01-01T14:42:02.903</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

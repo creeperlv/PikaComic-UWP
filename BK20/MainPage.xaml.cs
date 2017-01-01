@@ -9,6 +9,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -109,6 +110,10 @@ namespace BK20
                     btn_Member.IsChecked = true;
                     btn_Ssetting.IsChecked = false;
                     txt_Header.Text = "個人中心";
+                    if (grid_profile.DataContext==null)
+                    {
+                        GetProFile();
+                    }
                     break;
                 case 3:
                     btn_Home.IsChecked = false;
@@ -156,6 +161,11 @@ namespace BK20
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            txt_password.Password = SettingHelper.Get_StartPassword();
+            if (txt_password.Password.Length!=0)
+            {
+                p_password.Visibility = Visibility.Visible;
+            }
             frame.Visibility = Visibility.Visible;
             frame.Navigate(typeof(BlankPage));
 
@@ -291,6 +301,49 @@ namespace BK20
                 pr_Load.Visibility = Visibility.Collapsed;
             }
         }
+
+        private async void GetProFile()
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+                string results = await WebClientClass.GetResults(new Uri("https://picaapi.picacomic.com/users/profile"));
+                ProfileModel list = JsonConvert.DeserializeObject<ProfileModel>(results);
+                if (list.code == 200)
+                {
+                    grid_profile.DataContext = list.data.user;
+                    if (list.data.user.isPunched)
+                    {
+                        btn_Punch.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btn_Punch.Visibility = Visibility.Visible;
+                    }
+                }
+                else
+                {
+                    messShow.Show(list.message, 3000);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
+                }
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+            }
+        }
+
+
         private void main_Home_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             int i = Convert.ToInt32(main_Home.ActualWidth / 100);
@@ -331,12 +384,27 @@ namespace BK20
         private void gv_Cat_ItemClick(object sender, ItemClickEventArgs e)
         {
             var info = e.ClickedItem as CategoriesModel;
+            if (info.title== "嗶咔排行榜")
+            {
+                frame.Navigate(typeof(RankPage));
+                return;
+            }
+            if (info.title == "嗶咔聊天室")
+            {
+                messShow.Show("聊天室還沒完工...", 3000);
+                return;
+            }
+            if (info.title == "支持嗶咔")
+            {
+
+                return;
+            }
             frame.Navigate(typeof(ColumnPage),new object[]{ info.title, false, false });
         }
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-
+            messShow.Show("嗶咔~嗶咔~", 3000);
         }
 
         private async void ls_items_ItemClick(object sender, ItemClickEventArgs e)
@@ -409,6 +477,97 @@ namespace BK20
         {
             frame.Navigate(typeof(ColumnPage), new object[] { (e.ClickedItem as KeywordModel).keyword, true,false });
         }
+
+        private async void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            switch ((sender as HyperlinkButton).Tag.ToString())
+            {
+                case "faq":
+                    frame.Navigate(typeof(WebPage));
+                    break;
+                case "about":
+                    frame.Navigate(typeof(AboutPage));
+                    break;
+                case "sm":
+                    string info = @"01、本程序无任何盈利行为，开放源码于GITHUB上，仅供学习交流编程技术使用
+02、本程序为哔咔漫画第三方UWP，资源均来自哔咔(http://picacomic.com/)
+03、禁止将本程序任意传播,传播软件可能造成的任何法律和刑事事件本人不负任何责任
+04、任何个人使用引起的法律和刑事事件本人将不负任何责任";
+                    await new MessageDialog(info).ShowAsync();
+                    break;            
+
+                case "logout":
+                    SettingHelper.Set_Authorization("");
+                    this.Frame.Navigate(typeof(LoginPage));
+                    break;
+                case "exit":
+                    Application.Current.Exit();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            SettingHelper.Set_StartPassword(txt_password.Password);
+        }
+
+
+        private void start_pwd_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                if (start_pwd.Password==txt_password.Password)
+                {
+                    p_password.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    messShow.Show("密码错误",3000);
+                }
+            }
+        }
+
+        private void HyperlinkButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            messShow.Show("還沒完工...", 3000);
+        }
+
+        private async void btn_Punch_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+                string results = await WebClientClass.PostResults(new Uri("https://picaapi.picacomic.com/users/punch-in"),"");
+                PunchModel list = JsonConvert.DeserializeObject<PunchModel>(results);
+                if (list.code == 200)
+                {
+                   
+                     btn_Punch.Visibility = Visibility.Collapsed;
+                    messShow.Show("操作成功辣！", 3000);
+                }
+                else
+                {
+                    messShow.Show(list.message, 3000);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("操作失敗了，挂個VPN試試？", 3000);
+                }
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 
     public class CategoriesModel
@@ -443,6 +602,7 @@ namespace BK20
         }
 
     }
+
     public class HomeModel
     {
         public int code { get; set; }
@@ -498,5 +658,40 @@ namespace BK20
         }
 
 
+    }
+
+    public class ProfileModel
+    {
+        public int code { get; set; }
+        public string message { get; set; }
+        public ProfileModel data { get; set; }
+
+        public ProfileModel user { get; set; }
+
+        public string _id { get; set; }
+        public string birthday { get; set; }
+        public string email { get; set; }
+        public string keyword { get; set; }
+        public string gender { get; set; }
+        public string name { get; set; }
+        public string activation_date { get; set; }
+        public bool verified { get; set; }
+        public int exp { get; set; }
+        public int level { get; set; }
+        public string created_at { get; set; }
+        public bool isPunched { get; set; }
+    }
+
+    public class PunchModel
+    {
+        public int code { get; set; }
+        public string message { get; set; }
+        public PunchModel data { get; set; }
+
+        public PunchModel res { get; set; }
+
+        public string punchInLastDay{ get; set; }
+        public string status { get; set; }
+        
     }
 }

@@ -416,6 +416,7 @@ namespace BK20
         public List<string> categories { get; set; }
 
         public int likesCount { get; set; }
+        public string leaderboardCount { get; set; }
 
         public RandomModel thumb { get; set; }
         public string originalName { get; set; }

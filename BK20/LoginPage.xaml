@@ -1,0 +1,124 @@
+﻿<Page
+    x:Class="BK20.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BK20"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Login/splash_bg_1_blur.jpg"/>
+        </Grid.Background>
+        <StackPanel x:Name="p_Login" VerticalAlignment="Center" MaxWidth="350" Margin="20 0" Visibility="Visible">
+            <Image x:Name="img_Hello" Source="Assets/Login/splash_title_new.png"  Height="200"></Image>
+            <TextBox x:Name="l_txt_email" Margin="0 10" BorderThickness="1" PlaceholderText="輸入郵箱" BorderBrush="#7F939393"></TextBox>
+            <PasswordBox x:Name="l_txt_password" Margin="0 10" BorderThickness="1" PlaceholderText="輸入密碼" BorderBrush="#7F939393"></PasswordBox>
+            <Grid>
+                <HyperlinkButton x:Name="btn_GoSign" Click="btn_GoSign_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398"  >
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">成爲紳士</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+                <HyperlinkButton HorizontalAlignment="Right" x:Name="btn_Login" Click="btn_Login_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">紳士登入</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+            </Grid>
+            <Grid>
+                <HyperlinkButton Margin="0 5" Foreground="#CCFD3398" VerticalAlignment="Bottom" x:Name="btn_sende" Click="btn_sende_Click">重发激活邮件</HyperlinkButton>
+                <HyperlinkButton Margin="0 5" Foreground="#CCFD3398" HorizontalAlignment="Right" VerticalAlignment="Bottom" x:Name="btn_findp" Click="btn_findp_Click">忘记密码?</HyperlinkButton>
+            </Grid>
+           
+        </StackPanel>
+        <StackPanel x:Name="p_Sign" VerticalAlignment="Center" MaxWidth="350" Visibility="Collapsed" Margin="20 0">
+            <Image x:Name="img_Hello_1" Source="Assets/Login/splash_title_new.png"  Height="200"></Image>
+            <TextBox x:Name="s_txt_name" Margin="0 10" BorderThickness="1" PlaceholderText="輸入昵稱" BorderBrush="#7F939393"></TextBox>
+            <TextBox x:Name="s_txt_email" Margin="0 10" BorderThickness="1" PlaceholderText="輸入郵箱" BorderBrush="#7F939393"></TextBox>
+            <PasswordBox x:Name="s_txt_password" Margin="0 10" BorderThickness="1" PlaceholderText="輸入密碼" BorderBrush="#7F939393"></PasswordBox>
+            <PasswordBox x:Name="s_txt_password_a" Margin="0 10" BorderThickness="1" PlaceholderText="再次輸入密碼" BorderBrush="#7F939393"></PasswordBox>
+            <DatePicker x:Name="s_date" HorizontalAlignment="Stretch" Margin="0 10" BorderThickness="1" ></DatePicker>
+            <Grid>
+                <HyperlinkButton x:Name="btn_GoLogin" Click="btn_GoLogin_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">返回登錄</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+                <HyperlinkButton HorizontalAlignment="Right" x:Name="btn_Sign" Click="btn_Sign_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">成爲紳士</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+            </Grid>
+           
+
+        </StackPanel>
+        <StackPanel x:Name="p_Resend_activation" VerticalAlignment="Center" MaxWidth="350" Visibility="Collapsed" Margin="20 0">
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">重發激活郵件</TextBlock>
+
+            </StackPanel>
+            <TextBox x:Name="r_txt_email" Margin="0 10" BorderThickness="1" PlaceholderText="輸入郵箱" BorderBrush="#7F939393"></TextBox>
+            
+            <Grid>
+                <HyperlinkButton  Click="btn_GoLogin_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">返回登錄</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+                <HyperlinkButton HorizontalAlignment="Right" x:Name="btn_SendEmail" Click="btn_SendEmail_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">發送郵件</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+            </Grid>
+
+
+        </StackPanel>
+        <StackPanel x:Name="p_Find_Password" VerticalAlignment="Center" MaxWidth="350" Visibility="Collapsed" Margin="20 0">
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">找回密碼</TextBlock>
+
+            </StackPanel>
+            <TextBox x:Name="f_txt_email" Margin="0 10" BorderThickness="1" PlaceholderText="輸入郵箱" BorderBrush="#7F939393"></TextBox>
+
+            <Grid>
+                <HyperlinkButton  Click="btn_GoLogin_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">返回登錄</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+                <HyperlinkButton HorizontalAlignment="Right" x:Name="btn_SendEmail_f" Click="btn_SendEmail_f_Click">
+                    <Border CornerRadius="10" Background="#7FFD3398">
+                        <Grid Padding="40 8">
+                            <TextBlock Foreground="White">發送郵件</TextBlock>
+                        </Grid>
+                    </Border>
+                </HyperlinkButton>
+            </Grid>
+
+
+        </StackPanel>
+        <ProgressRing x:Name="pr_Load" Visibility="Collapsed" Grid.RowSpan="4" Width="56" Height="56" IsActive="True" Foreground="#FFFF79BC"></ProgressRing>
+        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20 76" HorizontalAlignment="Center"></local:MessageShow>
+    </Grid>
+    
+</Page>

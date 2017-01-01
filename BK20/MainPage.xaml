@@ -174,8 +174,117 @@
 
                     </ScrollViewer>
                 </PivotItem>
-                <PivotItem Margin="0">3</PivotItem>
-                <PivotItem Margin="0">4</PivotItem>
+                <PivotItem Margin="0">
+                    <ScrollViewer Style="{StaticResource ScrollViewerStyle1}" VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <Grid Height="200" x:Name="grid_profile">
+                                <Grid.Background>
+                                    <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Login/placeholder_transparent.png"/>
+                                </Grid.Background>
+                                <StackPanel VerticalAlignment="Center">
+                                    <Ellipse Width="72" Height="72">
+                                        <Ellipse.Fill>
+                                            <ImageBrush Stretch="Fill" ImageSource="Assets/Login/logo_round.png"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <TextBlock HorizontalAlignment="Center" Margin="10 5" Text="{Binding name}"></TextBlock>
+
+                                    <TextBlock HorizontalAlignment="Center" Margin="10 5" FontSize="14" Foreground="Gray">LV<Run Text="{Binding level}"/></TextBlock>
+                                </StackPanel>
+                                <HyperlinkButton Foreground="Black" x:Name="btn_Punch" Click="btn_Punch_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10">
+                                    <StackPanel>
+                                        <Image Source="Assets/Login/icon_punch_in.png" Width="50"></Image>
+                                        <TextBlock FontSize="14" HorizontalAlignment="Center">打嗶咔</TextBlock>
+                                    </StackPanel>
+                                </HyperlinkButton>
+                            </Grid>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0" Margin="0 10 0 0" Click="HyperlinkButton_Click_2" Tag="his"  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">最近觀看</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0" Click="HyperlinkButton_Click_2" Tag="colloct" Margin="0 10 0 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">我的收藏</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0" Click="HyperlinkButton_Click_2" Tag="comment" Margin="0 10 0 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">我的評論</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </ScrollViewer>
+                </PivotItem>
+                <PivotItem Margin="0">
+                    <ScrollViewer Style="{StaticResource ScrollViewerStyle1}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel >
+
+                            <Grid Background="White" Height="48" Padding="10 0"  Margin="0 10 0 0">
+                               
+                                <TextBlock Margin="10 0" VerticalAlignment="Center">啟動密碼</TextBlock>
+                                <PasswordBox x:Name="txt_password" VerticalAlignment="Center"  PlaceholderText="留空为無須密碼" HorizontalAlignment="Right" Grid.Column="1" BorderThickness="0 0 0 1" Background="Transparent" PasswordChanged="PasswordBox_PasswordChanged" ></PasswordBox>
+                            </Grid>
+                            <Grid Background="White" Height="48" Padding="10 0"  Margin="0 1 0 0">
+
+                                <TextBlock Margin="10 0" HorizontalAlignment="Left" VerticalAlignment="Center">夜間模式</TextBlock>
+                                <ToggleSwitch  HorizontalAlignment="Right" Grid.Column="1" BorderThickness="0 0 0 1" Background="Transparent" Style="{StaticResource ToggleSwitchStyle1}" ></ToggleSwitch>
+                            </Grid>
+                            <Grid Background="White" Height="48" Padding="10 0"  Margin="0 1 0 0">
+
+                                <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center">允許數據觀看</TextBlock>
+                                <ToggleSwitch  HorizontalAlignment="Right" Grid.Column="1" BorderThickness="0 0 0 1" Background="Transparent" Style="{StaticResource ToggleSwitchStyle1}" ></ToggleSwitch>
+                            </Grid>
+                            <Grid Background="White" Height="48" Padding="10 0"  Margin="0 1 0 0">
+
+                                <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center">記錄觀看曆史</TextBlock>
+                                <ToggleSwitch  HorizontalAlignment="Right" Grid.Column="1" BorderThickness="0 0 0 1" Background="Transparent" Style="{StaticResource ToggleSwitchStyle1}" ></ToggleSwitch>
+                            </Grid>
+                            <HyperlinkButton Background="White" Click="HyperlinkButton_Click_1" Tag="faq" Height="48" Padding="10 0"  Margin="0 10 0 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid  HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black"  >常見問題(FAQ)</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0" Click="HyperlinkButton_Click_1" Tag="sm" Margin="0 1 0 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">使用聲明</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0" Click="HyperlinkButton_Click_1" Tag="about" Margin="0 1 0 0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center"  Foreground="Black">關于應用</TextBlock>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00F;" FontSize="14" Margin="10 0" HorizontalAlignment="Right"  VerticalAlignment="Center" Foreground="#7F808080"/>
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0"  Margin="0 10 0 0" HorizontalAlignment="Stretch" Tag="logout" Click="HyperlinkButton_Click_1" HorizontalContentAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">注銷賬號</TextBlock>
+                                  
+                                </Grid>
+                            </HyperlinkButton>
+                            <HyperlinkButton Background="White" Height="48" Padding="10 0"  Margin="0 1 0 0" HorizontalAlignment="Stretch" Tag="exit" Click="HyperlinkButton_Click_1" HorizontalContentAlignment="Stretch">
+                                
+                                <Grid HorizontalAlignment="Stretch">
+
+                                    <TextBlock Margin="10 0" HorizontalAlignment="Left"  VerticalAlignment="Center" Foreground="Black">退出應用</TextBlock>
+                                </Grid>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </ScrollViewer>
+                    
+                </PivotItem>
             </Pivot>
             <Grid Grid.Row="2" Background="#FFFF79BC">
                 <Grid.ColumnDefinitions>
@@ -222,7 +331,12 @@
             </Frame.ContentTransitions>
         </Frame>
         <ProgressRing x:Name="pr_Load" Visibility="Collapsed" Grid.RowSpan="4" Width="56" Height="56" IsActive="True" Foreground="#FFFF79BC"></ProgressRing>
-        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20" HorizontalAlignment="Center"></local:MessageShow>
+        <Grid x:Name="p_password" Background="#FFFF79BC" Visibility="Collapsed" Grid.ColumnSpan="2">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" MaxWidth="250">
+                <PasswordBox BorderThickness="0"  x:Name="start_pwd" PlaceholderText="輸入啓動密碼，按Enter進入" KeyDown="start_pwd_KeyDown"></PasswordBox>
+            </StackPanel>
+        </Grid>
+        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20 76" HorizontalAlignment="Center"></local:MessageShow>
     </Grid>
    
 </Page>

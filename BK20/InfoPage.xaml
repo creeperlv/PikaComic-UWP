@@ -67,7 +67,7 @@
                             </Grid.RowDefinitions>
                             <Grid Margin="5" x:Name="grid_Info_Date" >
                                 <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Foreground="Gray">
-                                    <Run>最後更新:</Run>
+                                    <Run>更新:</Run>
                                     <Run Text="{Binding updated_at}"></Run>
                                 </TextBlock>
                                 <HyperlinkButton Click="HyperlinkButton_Click" HorizontalAlignment="Left" FontSize="14" Foreground="#7FF52E9B">
@@ -116,9 +116,67 @@
                 <PivotItem.Header>
                     <TextBlock FontSize="16">評論(<Run Text="{Binding commentsCount}"/>)</TextBlock>
                 </PivotItem.Header>
-                <Grid>
-                   
-                </Grid>
+                <ScrollViewer x:Name="sv_Comment" Style="{StaticResource ScrollViewerStyle1}"  VerticalScrollBarVisibility="Auto" ViewChanged="sv_Comment_ViewChanged">
+                    <ListView x:Name="ls_comment" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.HorizontalScrollMode="Disabled" SelectionMode="None" IsItemClickEnabled="True" ItemClick="ls_comment_ItemClick">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                                <Setter Property="Margin" Value="0 1 0 0"></Setter>
+                                <Setter Property="Background" Value="White"></Setter>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid   Margin="0,5" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition ></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <HyperlinkButton Grid.RowSpan="2" HorizontalAlignment="Left">
+                                        <StackPanel>
+                                            <Ellipse Width="32" Height="32" Stroke="#7FC1C1C1" HorizontalAlignment="Left">
+                                                <Ellipse.Fill>
+                                                    <ImageBrush ImageSource="{Binding Path=_user.avatar.image}"/>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                           
+                                        </StackPanel>
+                                    </HyperlinkButton>
+
+                                    <TextBlock Margin="5,0" Text="{Binding Path=_user.name}" IsTextSelectionEnabled="True" Grid.Column="1" VerticalAlignment="Bottom"></TextBlock>
+                                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top">
+                                        <StackPanel Orientation="Horizontal"  Margin="5,0" Visibility="Collapsed">
+                                            <TextBlock Text="#" Foreground="#FFB6B6B6" ></TextBlock>
+                                            <TextBlock Text="{Binding floor}" Visibility="Collapsed" Foreground="#FFB6B6B6" ></TextBlock>
+                                           
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding time}"   Margin="5,0" Foreground="#FFB6B6B6"></TextBlock>
+                                    </StackPanel>
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Grid.Column="1" HorizontalAlignment="Right" Glyph="&#xE10C;" />
+                                    <TextBlock Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" Margin="0,5" TextWrapping="Wrap" Text="{Binding Path=content}">
+                                    </TextBlock>
+
+                                    <!--<TextBlock Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" Margin="0,5" Text="{Binding Path=content.message}" TextWrapping="Wrap"></TextBlock>-->
+                                    <StackPanel Orientation="Horizontal" Visibility="Collapsed" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.Row="3">
+                                        <!--<SymbolIcon Symbol="Message" Foreground="#FF666666" />-->
+
+                                        <!--<SymbolIcon Symbol="Like" Foreground="#FF666666" />-->
+                                        <HyperlinkButton x:Name="btn_Zan">
+                                            <TextBlock Text="喜欢" VerticalAlignment="Center"  FontSize="12" Margin="5,0"></TextBlock>
+                                        </HyperlinkButton>
+                                        <TextBlock Text="{Binding like}" VerticalAlignment="Center" FontSize="12" Margin="5,0"></TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
 
             </PivotItem>
         </Pivot>

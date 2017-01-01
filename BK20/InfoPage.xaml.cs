@@ -36,6 +36,7 @@ namespace BK20
                 pageN = 1;
                 _id = (e.Parameter as object[])[0].ToString();
                 LoadData();
+                LoadComment();
             }
         }
         string _id = "";
@@ -136,6 +137,66 @@ namespace BK20
             }
         }
 
+        int CpageN = 1;
+        bool Cloading = false;
+        private async void LoadComment()
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+                Cloading = true;
+                if (CpageN == 1)
+                {
+                    list_E.Items.Clear();
+                }
+                string uri = "";
+
+                uri = "https://picaapi.picacomic.com/comics/" + _id + "/comments?page=" + CpageN;
+
+                string results = await WebClientClass.GetResults(new Uri(uri));
+                CommentsModel info = JsonConvert.DeserializeObject<CommentsModel>(results);
+
+                if (info.code == 200)
+                {
+                    if (info.data.comments.docs.Count != 0)
+                    {
+                        info.data.comments.docs.ForEach(x => ls_comment.Items.Add(x));
+                        CpageN++;
+                    }
+                    else
+                    {
+                        messShow.Show("沒有更多了", 2000);
+                        btn_LoadMore.Visibility = Visibility.Collapsed;
+                    }
+                }
+                else
+                {
+                    messShow.Show(info.message, 2000);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("讀取信息失敗了，挂個VPN試試？", 3000);
+                }
+
+            }
+            finally
+            {
+                Cloading = false;
+                pr_Load.Visibility = Visibility.Collapsed;
+
+            }
+        }
+
+
+
         private  void pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
@@ -201,6 +262,22 @@ namespace BK20
         private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ColumnPage), new object[] { (this.DataContext as InfoModel).author, true, false });
+        }
+
+        private void ls_comment_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void sv_Comment_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            if (sv_Comment.VerticalOffset == sv_Comment.ScrollableHeight)
+            {
+                if (!Cloading)
+                {
+                    LoadComment();
+                }
+            }
         }
     }
 
@@ -280,4 +357,51 @@ namespace BK20
      
 
     }
+
+    public class CommentsModel
+    {
+        public int code { get; set; }
+        public string message { get; set; }
+        public CommentsModel data { get; set; }
+        public CommentsModel comments { get; set; }
+        public List<CommentsModel> docs { get; set; }
+        public int total { get; set; }
+        public int pages { get; set; }
+
+        public string _id { get; set; }
+        public string content { get; set; }
+        public CommentsModel _user { get; set; }
+        public string gender { get; set; }
+        public string name { get; set; }
+        public bool verified { get; set; }
+        public string exp { get; set; }
+        public string level { get; set; }
+
+        public CommentsModel avatar { get; set; }
+        public string originalName { get; set; }
+        public string path { get; set; }
+        public string fileServer { get; set; }
+        public string image
+        {
+            get
+            {
+                return fileServer + "/static/" + path;
+            }
+        }
+
+
+
+        public string _comic { get; set; }
+        public bool hide { get; set; }
+        public DateTime created_at { get; set; }
+        public int likesCount { get; set; }
+        public int commentsCount { get; set; }
+        public bool isLiked { get; set; }
+
+        public string time { get {
+                return created_at.ToString("yyyy-MM-dd");
+            } }
+
+    }
+
 }
