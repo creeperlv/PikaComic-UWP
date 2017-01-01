@@ -3,7 +3,7 @@
 
 使用说明
 ----
-安装包移步Releases下载
+[点击移步Releases下载安装包](https://github.com/xiaoyaocz/PikaComic-UWP/releases)
 
 安装教程
 ----
