@@ -531,7 +531,16 @@ namespace BK20
 
         private void HyperlinkButton_Click_2(object sender, RoutedEventArgs e)
         {
-            messShow.Show("還沒完工...", 3000);
+            switch ((sender as HyperlinkButton).Tag.ToString())
+            {
+                case "colloct":
+                    frame.Navigate(typeof(FavouritePage));
+                    break;
+                default:
+                    messShow.Show("還沒完工...", 3000);
+                    break;
+            }
+          
         }
 
         private async void btn_Punch_Click(object sender, RoutedEventArgs e)
@@ -544,8 +553,9 @@ namespace BK20
                 if (list.code == 200)
                 {
                    
-                     btn_Punch.Visibility = Visibility.Collapsed;
+                    btn_Punch.Visibility = Visibility.Collapsed;
                     messShow.Show("操作成功辣！", 3000);
+                    GetProFile();
                 }
                 else
                 {

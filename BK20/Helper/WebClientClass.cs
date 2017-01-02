@@ -21,11 +21,13 @@ namespace BK20
         {
                 using (HttpClient hc = new HttpClient())
                 {
+                
                 hc.DefaultRequestHeaders.Add("authorization", SettingHelper.Get_Authorization());
                 hc.DefaultRequestHeaders.Add("api-key", "C69BAF41DA5ABD1FFEDC6D2FEA56B");
                 hc.DefaultRequestHeaders.Add("accept", "application/vnd.picacomic.com.v1+json");
                 hc.DefaultRequestHeaders.Add("app-version", " 2.0.3.9");
-                hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
+                //hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
+                hc.DefaultRequestHeaders.Add("app-uuid", Guid.NewGuid().ToString());
                 hc.DefaultRequestHeaders.Add("app-platform", "android");
                 hc.DefaultRequestHeaders.Add("User-Agent", "okhttp/3.2.0");
                 HttpResponseMessage hr = await hc.GetAsync(url);
@@ -54,9 +56,9 @@ namespace BK20
                     hc.DefaultRequestHeaders.Add("api-key", "C69BAF41DA5ABD1FFEDC6D2FEA56B");
                     hc.DefaultRequestHeaders.Add("accept", "application/vnd.picacomic.com.v1+json");
                     hc.DefaultRequestHeaders.Add("app-version", " 2.0.3.9");
-
-                    hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
-                    hc.DefaultRequestHeaders.Add("app-platform", "android");
+                hc.DefaultRequestHeaders.Add("app-uuid", Guid.NewGuid().ToString());
+                //hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
+                hc.DefaultRequestHeaders.Add("app-platform", "android");
                     hc.DefaultRequestHeaders.Add("User-Agent", "okhttp/3.2.0");
                     var response = await hc.PostAsync(url, new HttpStringContent(PostContent, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json"));
                     response.EnsureSuccessStatusCode();
@@ -76,7 +78,8 @@ namespace BK20
                     hc.DefaultRequestHeaders.Add("accept", "application/vnd.picacomic.com.v1+json");
                  
                     hc.DefaultRequestHeaders.Add("app-version", " 2.0.3.9");
-                    hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
+                    hc.DefaultRequestHeaders.Add("app-uuid", Guid.NewGuid().ToString());
+                    //hc.DefaultRequestHeaders.Add("app-uuid", "adf860ea-c460-328a-b126-5fa01b634ed8");
                     hc.DefaultRequestHeaders.Add("app-platform", "android");
                     hc.DefaultRequestHeaders.Add("User-Agent", "okhttp/3.2.0");
                     var response = await hc.PostAsync(url, new HttpStringContent(PostContent, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json"));

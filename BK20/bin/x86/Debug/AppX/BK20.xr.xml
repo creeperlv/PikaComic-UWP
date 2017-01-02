@@ -415,6 +415,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="NavigateUri" />
       <RootProperty Name="Content" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Visibility" />
@@ -432,8 +433,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
-      <RootProperty Name="MaxWidth" />
       <RootProperty Name="Stretch" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Tapped" />
       <RootEvent Name="DoubleTapped" />
@@ -446,8 +447,8 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="Label" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
     </RootType>
@@ -484,6 +485,7 @@
     <RootType FullName="Windows.UI.Xaml.Media.Animation.BeginStoryboard">
       <RootProperty Name="Storyboard" />
     </RootType>
+    <RootType FullName="BK20.FavouritePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Margin" />
       <RootProperty Name="Header" />
@@ -492,6 +494,12 @@
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
       <RootProperty Name="Stretch" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="PrimaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Margin" />
@@ -578,11 +586,6 @@
     <RootType FullName="BK20.RankPage" />
     <RootType FullName="BK20.DataConverter1" />
     <RootType FullName="BK20.DataConverter2" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="PrimaryCommands" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
       <RootMethod Name="GetToolTip" />
       <RootMethod Name="SetToolTip" />

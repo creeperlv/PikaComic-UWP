@@ -34,6 +34,7 @@ namespace BK20
             if (e.NavigationMode == NavigationMode.New)
             {
                 pageN = 1;
+                CpageN = 1;
                 _id = (e.Parameter as object[])[0].ToString();
                 LoadData();
                 LoadComment();
@@ -57,6 +58,26 @@ namespace BK20
                 if (info.code == 200)
                 {
                     this.DataContext = info.data.comic;
+                    if (info.data.comic.isFavourite)
+                    {
+                        btn_UnCollect.Visibility = Visibility.Visible;
+                        btn_Collect.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btn_UnCollect.Visibility = Visibility.Collapsed;
+                        btn_Collect.Visibility = Visibility.Visible;
+                    }
+                    if (info.data.comic.isLiked)
+                    {
+                        btn_UnLike.Visibility = Visibility.Visible;
+                        btn_Like.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btn_UnLike.Visibility = Visibility.Collapsed;
+                        btn_Like.Visibility = Visibility.Visible;
+                    }
                     btn_LoadMore.Visibility = Visibility.Visible;
                     pr_Load.Visibility = Visibility.Collapsed;
                     LoadEp();
@@ -147,7 +168,7 @@ namespace BK20
                 Cloading = true;
                 if (CpageN == 1)
                 {
-                    list_E.Items.Clear();
+                    ls_comment.Items.Clear();
                 }
                 string uri = "";
 
@@ -277,6 +298,134 @@ namespace BK20
                 {
                     LoadComment();
                 }
+            }
+        }
+
+        private void btn_down_Click(object sender, RoutedEventArgs e)
+        {
+            messShow.Show("暫時還不支持離線~", 3000);
+        }
+
+        private void btn_Like_Click(object sender, RoutedEventArgs e)
+        {
+            Like(true);
+        }
+
+        private void btn_UnLike_Click(object sender, RoutedEventArgs e)
+        {
+            Like(false);
+        }
+
+        private void btn_Collect_Click(object sender, RoutedEventArgs e)
+        {
+            Collect(true);
+        }
+
+        private void btn_UnCollect_Click(object sender, RoutedEventArgs e)
+        {
+            Collect(false);
+        }
+
+        private async void Like(bool islike)
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+               
+                string uri = "";
+
+                uri = "https://picaapi.picacomic.com/comics/" + _id + "//like" ;
+
+                string results = await WebClientClass.PostResults(new Uri(uri),"");
+                CommentsModel info = JsonConvert.DeserializeObject<CommentsModel>(results);
+
+                if (info.code == 200)
+                {
+                    if (islike)
+                    {
+                        btn_UnLike.Visibility = Visibility.Visible;
+                        btn_Like.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btn_UnLike.Visibility = Visibility.Collapsed;
+                        btn_Like.Visibility = Visibility.Visible;
+                    }
+                }
+                else
+                {
+                    messShow.Show(info.message, 2000);
+
+                }
+                messShow.Show("操作成功辣！", 3000);
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("操作失敗了，挂個VPN試試？", 3000);
+                }
+
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+
+            }
+        }
+        private async void Collect(bool iscollect)
+        {
+            try
+            {
+                pr_Load.Visibility = Visibility.Visible;
+
+                string uri = "";
+
+                uri = "https://picaapi.picacomic.com/comics/" + _id + "/favourite";
+
+                string results = await WebClientClass.PostResults(new Uri(uri), "");
+                CommentsModel info = JsonConvert.DeserializeObject<CommentsModel>(results);
+
+                if (info.code == 200)
+                {
+                    if (iscollect)
+                    {
+                        btn_UnCollect.Visibility = Visibility.Visible;
+                        btn_Collect.Visibility = Visibility.Collapsed;
+                    }
+                    else
+                    {
+                        btn_UnCollect.Visibility = Visibility.Collapsed;
+                        btn_Collect.Visibility = Visibility.Visible;
+                    }
+                    messShow.Show("操作成功辣！", 3000);
+                }
+                else
+                {
+                    messShow.Show(info.message, 2000);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.HResult == -2147012867)
+                {
+                    messShow.Show("檢查你的網絡連接！", 3000);
+                }
+                else
+                {
+                    messShow.Show("操作失敗了，挂個VPN試試？", 3000);
+                }
+
+            }
+            finally
+            {
+                pr_Load.Visibility = Visibility.Collapsed;
+
             }
         }
     }

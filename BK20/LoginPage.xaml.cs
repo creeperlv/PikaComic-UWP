@@ -126,7 +126,7 @@ namespace BK20
                 }
                 else
                 {
-                    messShow.Show("登錄失敗了，挂個VPN試試？", 3000);
+                    messShow.Show("注冊失敗了，换个邮箱或挂個VPN試試？", 3000);
                 }
             }
            
