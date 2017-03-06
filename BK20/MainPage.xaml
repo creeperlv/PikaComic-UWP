@@ -190,6 +190,7 @@
                                     <TextBlock HorizontalAlignment="Center" Margin="10 5" Text="{Binding name}"></TextBlock>
 
                                     <TextBlock HorizontalAlignment="Center" Margin="10 5" FontSize="14" Foreground="Gray">LV<Run Text="{Binding level}"/></TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Margin="10 0" FontSize="14" Foreground="Gray">EXP <Run Text="{Binding exp}"/>/200</TextBlock>
                                 </StackPanel>
                                 <HyperlinkButton Foreground="Black" x:Name="btn_Punch" Click="btn_Punch_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10">
                                     <StackPanel>

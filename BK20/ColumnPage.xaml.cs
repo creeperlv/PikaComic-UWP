@@ -85,10 +85,12 @@ namespace BK20
                 switch (name)
                 {
                     case "隨機本子":
+                       
                         uri = "https://picaapi.picacomic.com/comics/random?page=" + pageNum;
                         break;
                     case "最近更新":
-                        uri = "https://picaapi.picacomic.com/comics?page=" + pageNum;
+                             //https://picaapi.picacomic.com/comics?page=1&s=ua
+                        uri = "https://picaapi.picacomic.com/comics?page=" + pageNum+ "&s=ua";
                         break;
                     default:
                         uri = string.Format("https://picaapi.picacomic.com/comics?page={1}&c={0}&s=ua", Uri.EscapeDataString(name), pageNum);

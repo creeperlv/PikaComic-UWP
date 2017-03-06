@@ -95,7 +95,7 @@ namespace BK20
             finally
             {
                 pr_Load.Visibility = Visibility.Collapsed;
-                loading = false;
+                loading = false;   
             }
 
         }

@@ -16,25 +16,25 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>04A8218A9DBCC19F1B8EFFC48DA1979DBD17DB30D06947819D84A9332E581868</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>808c0824-2e5f-44b9-8664-7c2ffe2a4dec_2.0.0.0_x86__a5x6jjv384fej</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>C8A35D627E37EB360BD0BF982BCF5FAE919257794530F62BEA1370CC3D417A74</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>808c0824-2e5f-44b9-8664-7c2ffe2a4dec_2.0.2.0_x86__a5x6jjv384fej</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>808c0824-2e5f-44b9-8664-7c2ffe2a4dec_a5x6jjv384fej!App</RegisteredUserModeAppID>
     <RegisteredPackageID>808c0824-2e5f-44b9-8664-7c2ffe2a4dec</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=xiaoyaocz</RegisteredPackagePublisher>
-    <RegisteredVersion>2.0.0.0</RegisteredVersion>
+    <RegisteredVersion>2.0.2.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-01-02T12:48:51.369</Modified>
+      <Modified>2017-03-06T12:43:23.158</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.exe">
       <PackagePath>entrypoint\BK20.exe</PackagePath>
-      <Modified>2017-01-02T12:48:50.733</Modified>
+      <Modified>2017-03-06T12:43:22.430</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\xiaoyaocz\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -859,7 +859,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\BK20.xr.xml">
       <PackagePath>BK20.xr.xml</PackagePath>
-      <Modified>2017-01-02T12:34:26.294</Modified>
+      <Modified>2017-03-06T12:42:44.858</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -868,11 +868,11 @@
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-01-02T12:48:51.165</Modified>
+      <Modified>2017-03-06T12:43:22.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\UWP\BK20\BK20\bin\x86\Debug\Core\BK20.exe">
       <PackagePath>BK20.exe</PackagePath>
-      <Modified>2017-01-02T12:48:51.364</Modified>
+      <Modified>2017-03-06T12:43:23.152</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

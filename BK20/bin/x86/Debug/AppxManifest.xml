@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" Publisher="CN=xiaoyaocz" Version="2.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" Publisher="CN=xiaoyaocz" Version="2.0.2.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>BK20</DisplayName>

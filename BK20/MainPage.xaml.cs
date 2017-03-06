@@ -228,6 +228,13 @@ namespace BK20
             }
             catch (Exception ex)
             {
+                if (ex.HResult== -2145844847)
+                {
+                    messShow.Show("登录失效，重新登录！", 3000);
+                    SettingHelper.Set_Authorization("");
+                    this.Frame.Navigate(typeof(LoginPage));
+                    return;
+                }
                 if (ex.HResult == -2147012867)
                 {
                     messShow.Show("檢查你的網絡連接！", 3000);

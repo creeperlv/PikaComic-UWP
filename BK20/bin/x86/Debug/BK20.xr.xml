@@ -28,6 +28,7 @@
     <RootPropertyPathName Name="updated_at" />
     <RootPropertyPathName Name="description" />
     <RootPropertyPathName Name="viewsCount" />
+    <RootPropertyPathName Name="exp" />
     <RootPropertyPathName Name="level" />
     <RootPropertyPathName Name="Width" />
     <RootPropertyPathName Name="keyword" />
