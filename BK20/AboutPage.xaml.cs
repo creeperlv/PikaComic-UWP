@@ -41,7 +41,17 @@ namespace BK20
             txt_ver.Text = SettingHelper.GetVersion();
         }
 
-        string log = @"Ver 2.0.0.0(2017-1-1)
+        string log = @"
+Ver 2.0.2.0(2017-1-10)
+
+1、修复无法登录
+
+Ver 2.0.1.0(2017-1-1)
+
+1、修复无法注册
+2、修复评论重复
+
+Ver 2.0.0.0(2017-1-1)
 
 首个2.0版本上线，相对1.X版更新
 1、UI大改，更加美观易用

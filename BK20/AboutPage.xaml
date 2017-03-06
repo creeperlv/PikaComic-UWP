@@ -25,8 +25,8 @@
             <StackPanel>
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="10 10 10 0">嗶咔嗶咔漫畫 UWP</TextBlock>
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="10 10 10 0">Ver <Run x:Name="txt_ver"></Run></TextBlock>
-             
-                <HyperlinkButton HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="10 10 10 0">@xiaoyaocz 開發存放于Github</HyperlinkButton>
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="10 10 10 0">@xiaoyaocz 开发</TextBlock>
+                <HyperlinkButton HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="10 10 10 0" NavigateUri="https://github.com/xiaoyaocz/PikaComic-UWP" >点击访问Github获得最新版本和源码</HyperlinkButton>
                 <StackPanel Orientation="Horizontal" >
                     
                     <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>

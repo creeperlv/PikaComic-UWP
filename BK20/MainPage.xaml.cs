@@ -228,6 +228,13 @@ namespace BK20
             }
             catch (Exception ex)
             {
+                if (ex.HResult== -2145844847)
+                {
+                    messShow.Show("登录失效，重新登录！", 3000);
+                    SettingHelper.Set_Authorization("");
+                    this.Frame.Navigate(typeof(LoginPage));
+                    return;
+                }
                 if (ex.HResult == -2147012867)
                 {
                     messShow.Show("檢查你的網絡連接！", 3000);
@@ -531,7 +538,16 @@ namespace BK20
 
         private void HyperlinkButton_Click_2(object sender, RoutedEventArgs e)
         {
-            messShow.Show("還沒完工...", 3000);
+            switch ((sender as HyperlinkButton).Tag.ToString())
+            {
+                case "colloct":
+                    frame.Navigate(typeof(FavouritePage));
+                    break;
+                default:
+                    messShow.Show("還沒完工...", 3000);
+                    break;
+            }
+          
         }
 
         private async void btn_Punch_Click(object sender, RoutedEventArgs e)
@@ -544,8 +560,9 @@ namespace BK20
                 if (list.code == 200)
                 {
                    
-                     btn_Punch.Visibility = Visibility.Collapsed;
+                    btn_Punch.Visibility = Visibility.Collapsed;
                     messShow.Show("操作成功辣！", 3000);
+                    GetProFile();
                 }
                 else
                 {

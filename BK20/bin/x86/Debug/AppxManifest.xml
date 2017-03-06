@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" Publisher="CN=xiaoyaocz" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" Publisher="CN=xiaoyaocz" Version="2.0.2.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="808c0824-2e5f-44b9-8664-7c2ffe2a4dec" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>BK20</DisplayName>
@@ -16,13 +16,14 @@
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10586.0" MaxVersionTested="10.0.14393.0" />
+    <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.24210.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
     <Resource Language="ZH-CN" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="BK20.exe" EntryPoint="BK20.App">
-      <uap:VisualElements DisplayName="哔咔漫畫 Beta" Square150x150Logo="Assets\Login\Square150x150Logo.png" Square44x44Logo="Assets\Login\Square44x44Logo.png" Description="哔咔漫畫 Beta" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="嗶咔漫畫 Beta" Square150x150Logo="Assets\Login\Square150x150Logo.png" Square44x44Logo="Assets\Login\Square44x44Logo.png" Description="嗶咔漫畫 Beta" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Login\Wide310x150Logo.png" Square310x310Logo="Assets\Login\Square310x310Logo.png" Square71x71Logo="Assets\Login\Square71x71Logo.png"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
@@ -41,6 +42,7 @@
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.25527.1" />
+    <build:Item Name="SQLite.UWP.2015" Version="3.15.1" />
     <build:Item Name="WindowsMobile" Version="10.0.14393.0" />
     <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
   </build:Metadata>

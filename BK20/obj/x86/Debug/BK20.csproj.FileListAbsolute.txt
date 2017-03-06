@@ -238,3 +238,10 @@ E:\UWP\BK20\BK20\obj\x86\Debug\LoginPage.g.i.cs
 E:\UWP\BK20\BK20\obj\x86\Debug\LoginPage.g.cs
 E:\UWP\BK20\BK20\obj\x86\Debug\LoginPage.xaml
 E:\UWP\BK20\BK20\obj\x86\Debug\LoginPage.xbf
+E:\UWP\BK20\BK20\bin\x86\Debug\FavouritePage.xbf
+E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.g.i.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.g.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.xaml
+E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.xbf
+E:\UWP\BK20\BK20\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
+E:\UWP\BK20\BK20\bin\x86\Debug\SQLite.Net.dll

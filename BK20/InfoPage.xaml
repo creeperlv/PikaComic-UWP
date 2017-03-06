@@ -26,91 +26,115 @@
                 <PivotItem.Header>
                     <TextBlock FontSize="16">信息</TextBlock>
                 </PivotItem.Header>
-                <ScrollViewer x:Name="sv" Style="{StaticResource ScrollViewerStyle1}" VerticalScrollBarVisibility="Auto" ViewChanged="sv_ViewChanged">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid x:Name="grid_Info"  Background="White">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer x:Name="sv" Style="{StaticResource ScrollViewerStyle1}" VerticalScrollBarVisibility="Auto" ViewChanged="sv_ViewChanged">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-                            <Image Height="100" Grid.RowSpan="4" MaxWidth="100" Tapped="Image_Tapped" Margin="5" Source="{Binding Path=thumb.image}" Stretch="UniformToFill"/>
-                            <TextBlock Grid.Column="1" FontSize="16" Margin="5 0" MaxLines="3" TextTrimming="CharacterEllipsis" TextWrapping="Wrap" ><Run Text="{Binding title}"></Run>(<Run Text="{Binding pagesCount}"></Run>P)</TextBlock>
-                            <HyperlinkButton Click="HyperlinkButton_Click_1" Grid.Column="1"  Foreground="#7FF52E9B" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="1" Padding="0">
-                                <TextBlock Text="{Binding author}"></TextBlock></HyperlinkButton>
-                            <TextBlock Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="2">
+                            <Grid x:Name="grid_Info"  Background="White">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Height="100" Grid.RowSpan="4" MaxWidth="100" Tapped="Image_Tapped" Margin="5" Source="{Binding Path=thumb.image}" Stretch="UniformToFill"/>
+                                <TextBlock Grid.Column="1" FontSize="16" Margin="5 0" MaxLines="3" TextTrimming="CharacterEllipsis" TextWrapping="Wrap" ><Run Text="{Binding title}"></Run>(<Run Text="{Binding pagesCount}"></Run>P)</TextBlock>
+                                <HyperlinkButton Click="HyperlinkButton_Click_1" Grid.Column="1"  Foreground="#7FF52E9B" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="1" Padding="0">
+                                    <TextBlock Text="{Binding author}"></TextBlock>
+                                </HyperlinkButton>
+                                <TextBlock Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="2">
 								<Run Text="分類："/>
 								<Run Text="{Binding cats}"/>
-                            </TextBlock>
-                            <TextBlock Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="3">
+                                </TextBlock>
+                                <TextBlock Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="5 0" Grid.Row="3">
 								<Run Text="紳士指數："/>
 								<Run Text="{Binding viewsCount}"/>
 
-                            </TextBlock>
-                            <TextBlock x:Name="txt_Desc" Text="{Binding description}" IsTextSelectionEnabled="True" TextWrapping="Wrap" Grid.ColumnSpan="2" Grid.Row="4" Margin="5" FontSize="14" Foreground="Gray"></TextBlock>
-                        </Grid>
-                        <Grid Grid.Row="1" Background="White">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid Margin="5" x:Name="grid_Info_Date" >
-                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Foreground="Gray">
+                                </TextBlock>
+                                <TextBlock x:Name="txt_Desc" Text="{Binding description}" IsTextSelectionEnabled="True" TextWrapping="Wrap" Grid.ColumnSpan="2" Grid.Row="4" Margin="5" FontSize="14" Foreground="Gray"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="1" Background="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Margin="5" x:Name="grid_Info_Date" >
+                                    <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" Foreground="Gray">
                                     <Run>更新:</Run>
                                     <Run Text="{Binding updated_at}"></Run>
-                                </TextBlock>
-                                <HyperlinkButton Click="HyperlinkButton_Click" HorizontalAlignment="Left" FontSize="14" Foreground="#7FF52E9B">
-                                    <TextBlock>
+                                    </TextBlock>
+                                    <HyperlinkButton Click="HyperlinkButton_Click" HorizontalAlignment="Left" FontSize="14" Foreground="#7FF52E9B">
+                                        <TextBlock>
                                         <Run>上傳騎士:</Run>
                                     <Run Text="{Binding Path=_creator.name}"></Run>
-                                    </TextBlock>
-                                     
-                                </HyperlinkButton>
-                            </Grid>
-                            
-                        </Grid>
-                        <StackPanel Background="White" Margin="0 10" Grid.Row="2">
-                            <Grid>
-                                <StackPanel Orientation="Horizontal" >
-                                    <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
-                                    <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">章節</TextBlock>
+                                        </TextBlock>
 
-                                </StackPanel>
-                                <HyperlinkButton x:Name="btn_View" Visibility="Collapsed" Margin="10 0" HorizontalAlignment="Right" Foreground="#FFFF79BC" >上次看到第一话</HyperlinkButton>
+                                    </HyperlinkButton>
+                                </Grid>
+
                             </Grid>
-                            <GridView x:Name="list_E" Margin="10 5"  Grid.Row="2" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.HorizontalScrollMode="Disabled" SelectionMode="None" IsItemClickEnabled="True" ItemClick="list_E_ItemClick">
-                                <GridView.ItemContainerStyle>
-                                    <Style TargetType="GridViewItem">
-                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                                        <Setter Property="BorderBrush" Value="#FFFF79BC" />
-                                        <Setter Property="BorderThickness" Value="1"></Setter>
-                                        <Setter Property="MinWidth" Value="72" />
-                                    </Style>
-                                </GridView.ItemContainerStyle>
-                                <GridView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFF79BC">
+                            <StackPanel Background="White" Margin="0 10" Grid.Row="2">
+                                <Grid>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <Image Source="Assets/register_name.png" Width="24" Margin="10 5"></Image>
+                                        <TextBlock VerticalAlignment="Center" Foreground="#FFFF79BC"  FontSize="16">章節</TextBlock>
+
+                                    </StackPanel>
+                                    <HyperlinkButton x:Name="btn_View" Visibility="Collapsed" Margin="10 0" HorizontalAlignment="Right" Foreground="#FFFF79BC" >上次看到第一话</HyperlinkButton>
+                                </Grid>
+                                <GridView x:Name="list_E" Margin="10 5"  Grid.Row="2" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.HorizontalScrollMode="Disabled" SelectionMode="None" IsItemClickEnabled="True" ItemClick="list_E_ItemClick">
+                                    <GridView.ItemContainerStyle>
+                                        <Style TargetType="GridViewItem">
+                                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                            <Setter Property="BorderBrush" Value="#FFFF79BC" />
+                                            <Setter Property="BorderThickness" Value="1"></Setter>
+                                            <Setter Property="MinWidth" Value="72" />
+                                        </Style>
+                                    </GridView.ItemContainerStyle>
+                                    <GridView.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFF79BC">
                                             <Run Text="{Binding title}"></Run></TextBlock>
-                                    </DataTemplate>
-                                </GridView.ItemTemplate>
-                            </GridView>
-                            <HyperlinkButton x:Name="btn_LoadMore" Click="btn_LoadMore_Click" HorizontalAlignment="Stretch" Foreground="#FFFF79BC"  Margin="10 0 10 10">
-                                <TextBlock>加載更多章節</TextBlock></HyperlinkButton>
-                        </StackPanel>
-                     
-                    </Grid>
-                </ScrollViewer>
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                                <HyperlinkButton x:Name="btn_LoadMore" Click="btn_LoadMore_Click" HorizontalAlignment="Stretch" Foreground="#FFFF79BC"  Margin="10 0 10 10">
+                                    <TextBlock>加載更多章節</TextBlock>
+                                </HyperlinkButton>
+                            </StackPanel>
+
+                        </Grid>
+                    </ScrollViewer>
+                    <CommandBar Grid.Row="1" Background="White" BorderThickness="0 1 0 0" Foreground="#FFFF79BC">
+                        <AppBarButton x:Name="btn_Like" Click="btn_Like_Click" Foreground="#FFFF79BC" Label="喜歡">
+                            <AppBarButton.Icon>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE006;" />
+                            </AppBarButton.Icon>
+                        </AppBarButton>
+                        <AppBarButton x:Name="btn_UnLike" Click="btn_UnLike_Click" Visibility="Collapsed" Foreground="#FFFF79BC" Label="取消喜歡">
+                            <AppBarButton.Icon>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00B;" />
+                            </AppBarButton.Icon>
+                        </AppBarButton>
+                        <AppBarButton Icon="OutlineStar" x:Name="btn_Collect" Click="btn_Collect_Click" Foreground="#FFFF79BC" Label="收藏"></AppBarButton>
+                        <AppBarButton Icon="Favorite" x:Name="btn_UnCollect" Click="btn_UnCollect_Click" Visibility="Collapsed" Foreground="#FFFF79BC" Label="收藏"></AppBarButton>
+                        <AppBarButton x:Name="btn_down" Click="btn_down_Click" Icon="Download" Foreground="#FFFF79BC" Label="下载"></AppBarButton>
+                    </CommandBar>
+                </Grid>
+         
             </PivotItem>
             <PivotItem Margin="0" >
                 <PivotItem.Header>
@@ -181,6 +205,6 @@
             </PivotItem>
         </Pivot>
         <ProgressRing x:Name="pr_Load" Visibility="Collapsed" Grid.RowSpan="4" Width="56" Height="56" IsActive="True" Foreground="#FFFF79BC"></ProgressRing>
-        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20" HorizontalAlignment="Center"></local:MessageShow>
+        <local:MessageShow x:Name="messShow" VerticalAlignment="Bottom" Grid.RowSpan="2" Margin="20 76" HorizontalAlignment="Center"></local:MessageShow>
     </Grid>
 </Page>
