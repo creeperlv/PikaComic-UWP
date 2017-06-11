@@ -262,7 +262,7 @@ namespace BK20
                 {
                     List<CategoriesModel> ls = new List<CategoriesModel>();
                     ls.Add(new CategoriesModel() { title = "支持嗶咔", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_support.jpg" } });
-                    ls.Add(new CategoriesModel() { title = "嗶咔聊天室", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_love_pica.jpg" } });
+                    ls.Add(new CategoriesModel() { title = "Avnight", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_love_pica.jpg" } });
                     ls.Add(new CategoriesModel() { title = "嗶咔排行榜", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_leaderboard.jpg" } });
                     ls.Add(new CategoriesModel() { title = "隨機本子", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_random.jpg" } });
                     ls.Add(new CategoriesModel() { title = "最近更新", thumb = new CategoriesModel() { image = "ms-appx:///Assets/Cat/cat_latest.jpg" } });
@@ -396,9 +396,9 @@ namespace BK20
                 frame.Navigate(typeof(RankPage));
                 return;
             }
-            if (info.title == "嗶咔聊天室")
+            if (info.title == "Avnight")
             {
-                messShow.Show("聊天室還沒完工...", 3000);
+                frame.Navigate(typeof(AVNightPage));
                 return;
             }
             if (info.title == "支持嗶咔")

@@ -129,7 +129,7 @@ namespace BK20
                 wc = new WebClientClass();
                 txt_Count.Text = string.Empty;
                 txt_zoom.Text = (list_E.SelectedItem as EpsModel).title;
-                List<EpModel> ls = new List<EpModel>();
+                List<EpModel> ls1 = new List<EpModel>();
                 while (true)
                 {
                     string results = await WebClientClass.GetResults(new Uri(string.Format("https://picaapi.picacomic.com/comics/{0}/order/{1}/pages?page={2}", Id,(list_E.SelectedItem as EpsModel).order, epPage)));
@@ -140,7 +140,7 @@ namespace BK20
                         List<EpModel> epList = JsonConvert.DeserializeObject<List<EpModel>>(obj["data"]["pages"]["docs"].ToString());
                         if (epList.Count != 0)
                         {
-                            epList.ForEach(x => ls.Add(x));
+                            epList.ForEach(x => ls1.Add(x));
                             epPage++;
                         }
                         else
@@ -154,8 +154,8 @@ namespace BK20
                     }
 
                 }
-                fv.ItemsSource = ls;
-                txt_Count.Text = ls.Count.ToString();
+                fv.ItemsSource = ls1;
+                txt_Count.Text = ls1.Count.ToString();
                 txt_Loading.Visibility = Visibility.Visible;
             }
             catch (Exception ex)
@@ -188,7 +188,8 @@ namespace BK20
             {
                 btn_SelectE.Flyout.Hide();
                 fv.ItemsSource = null;
-                epPage = list_E.SelectedIndex + 1;
+                epPage = 1;
+               // epPage = 0;
                 GetList();
             }
         }
@@ -221,6 +222,18 @@ namespace BK20
             else
             {
                 list_E.SelectedIndex = epPage - 2;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(txt_page.Text,out int _int))
+            {
+                if (_int==0|| _int==fv.Items.Count)
+                {
+                    return;
+                }
+                fv.SelectedIndex = _int;
             }
         }
     }

@@ -26,11 +26,16 @@
 
         </FlipView>
         <Grid VerticalAlignment="Bottom" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <StackPanel  Orientation="Horizontal">
+           
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <AppBarButton x:Name="btn_Forward" Click="btn_Forward_Click" ToolTipService.ToolTip="上一章" Foreground="Gray" Width="48" Height="48">
                     <AppBarButton.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE00E;" />
@@ -47,8 +52,12 @@
                 </TextBlock>
 
             </StackPanel>
-            <StackPanel  Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Right">
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Right">
                 <!--<TextBlock Margin="10 0" Foreground="Gray">100%电量</TextBlock>-->
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+                    <TextBox BorderThickness="1" x:Name="txt_page" Background="Transparent"></TextBox>
+                    <Button Foreground="White" Click="Button_Click">Enter</Button>
+                </StackPanel>
                 <TextBlock Foreground="Gray" x:Name="txt_timer" VerticalAlignment="Center"/>
                 <AppBarButton x:Name="btn_SelectE"  ToolTipService.ToolTip="选集" Foreground="Gray" Width="48" Height="48">
                     <AppBarButton.Icon>

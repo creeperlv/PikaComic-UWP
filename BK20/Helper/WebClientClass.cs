@@ -48,7 +48,19 @@ User-Agent: okhttp/3.2.0
                     return results;
                 }
         }
+        public static async Task<string> GetResults_Avnight(Uri url)
+        {
+            using (HttpClient hc = new HttpClient())
+            {
+                
+                hc.DefaultRequestHeaders.Add("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2VfaWQiOiI1NWY0ODVmOTM2ZDVkZjIyIiwiYXVkIjoiYXZuaWdodCIsImlhdCI6MTQ5NTk3NTI2NywidmlkZW9fZXhwaXJlZCI6MTU5MDU4MzI2NywibW9kZWwiOiJYaWFvbWkgTUkgNXMiLCJwbGF0Zm9ybSI6ImFuZHJvaWQiLCJ2ZXJzaW9uIjoiMi4wLjkiLCJleHAiOjE0OTY0MDcyNjd9.t3XLAQMvTX99Eb0RKLwUjidJ_SQbiTbZIuGeckUKPIk");
 
+                HttpResponseMessage hr = await hc.GetAsync(url);
+                hr.EnsureSuccessStatusCode();
+                string results = await hr.Content.ReadAsStringAsync();
+                return results;
+            }
+        }
         public static async Task<IBuffer> GetBuffer(Uri url)
         {
             using (HttpClient hc = new HttpClient())

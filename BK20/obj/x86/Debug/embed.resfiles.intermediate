@@ -1,5 +1,6 @@
 AboutPage.xbf
 App.xbf
+AVNightPage.xbf
 BlankPage.xbf
 ColumnPage.xbf
 Controls\MessageShow.xbf
@@ -7,6 +8,7 @@ FavouritePage.xbf
 InfoPage.xbf
 LoginPage.xbf
 MainPage.xbf
+PlayerPage.xbf
 RankPage.xbf
 ViewPage.xbf
 WebPage.xbf

@@ -132,49 +132,53 @@ namespace BK20.BK20_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[20];
+            _typeNameTable = new string[22];
             _typeNameTable[0] = "BK20.AboutPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "BK20.BlankPage";
-            _typeNameTable[4] = "BK20.MessageShow";
-            _typeNameTable[5] = "BK20.ColumnPage";
-            _typeNameTable[6] = "BK20.FavouritePage";
-            _typeNameTable[7] = "BK20.InfoPage";
-            _typeNameTable[8] = "BK20.LoginPage";
-            _typeNameTable[9] = "AppArrange.WrapPanel.WrapPanel";
-            _typeNameTable[10] = "Windows.UI.Xaml.Controls.Panel";
-            _typeNameTable[11] = "Double";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Orientation";
-            _typeNameTable[13] = "BK20.MainPage";
-            _typeNameTable[14] = "BK20.RankPage";
-            _typeNameTable[15] = "BK20.DataConverter1";
-            _typeNameTable[16] = "Object";
-            _typeNameTable[17] = "BK20.DataConverter2";
-            _typeNameTable[18] = "BK20.ViewPage";
-            _typeNameTable[19] = "BK20.WebPage";
+            _typeNameTable[3] = "BK20.MessageShow";
+            _typeNameTable[4] = "BK20.AVNightPage";
+            _typeNameTable[5] = "BK20.BlankPage";
+            _typeNameTable[6] = "BK20.ColumnPage";
+            _typeNameTable[7] = "BK20.FavouritePage";
+            _typeNameTable[8] = "BK20.InfoPage";
+            _typeNameTable[9] = "BK20.LoginPage";
+            _typeNameTable[10] = "AppArrange.WrapPanel.WrapPanel";
+            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Panel";
+            _typeNameTable[12] = "Double";
+            _typeNameTable[13] = "Windows.UI.Xaml.Controls.Orientation";
+            _typeNameTable[14] = "BK20.MainPage";
+            _typeNameTable[15] = "BK20.PlayerPage";
+            _typeNameTable[16] = "BK20.RankPage";
+            _typeNameTable[17] = "BK20.DataConverter1";
+            _typeNameTable[18] = "Object";
+            _typeNameTable[19] = "BK20.DataConverter2";
+            _typeNameTable[20] = "BK20.ViewPage";
+            _typeNameTable[21] = "BK20.WebPage";
 
-            _typeTable = new global::System.Type[20];
+            _typeTable = new global::System.Type[22];
             _typeTable[0] = typeof(global::BK20.AboutPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::BK20.BlankPage);
-            _typeTable[4] = typeof(global::BK20.MessageShow);
-            _typeTable[5] = typeof(global::BK20.ColumnPage);
-            _typeTable[6] = typeof(global::BK20.FavouritePage);
-            _typeTable[7] = typeof(global::BK20.InfoPage);
-            _typeTable[8] = typeof(global::BK20.LoginPage);
-            _typeTable[9] = typeof(global::AppArrange.WrapPanel.WrapPanel);
-            _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.Panel);
-            _typeTable[11] = typeof(global::System.Double);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
-            _typeTable[13] = typeof(global::BK20.MainPage);
-            _typeTable[14] = typeof(global::BK20.RankPage);
-            _typeTable[15] = typeof(global::BK20.DataConverter1);
-            _typeTable[16] = typeof(global::System.Object);
-            _typeTable[17] = typeof(global::BK20.DataConverter2);
-            _typeTable[18] = typeof(global::BK20.ViewPage);
-            _typeTable[19] = typeof(global::BK20.WebPage);
+            _typeTable[3] = typeof(global::BK20.MessageShow);
+            _typeTable[4] = typeof(global::BK20.AVNightPage);
+            _typeTable[5] = typeof(global::BK20.BlankPage);
+            _typeTable[6] = typeof(global::BK20.ColumnPage);
+            _typeTable[7] = typeof(global::BK20.FavouritePage);
+            _typeTable[8] = typeof(global::BK20.InfoPage);
+            _typeTable[9] = typeof(global::BK20.LoginPage);
+            _typeTable[10] = typeof(global::AppArrange.WrapPanel.WrapPanel);
+            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Panel);
+            _typeTable[12] = typeof(global::System.Double);
+            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
+            _typeTable[14] = typeof(global::BK20.MainPage);
+            _typeTable[15] = typeof(global::BK20.PlayerPage);
+            _typeTable[16] = typeof(global::BK20.RankPage);
+            _typeTable[17] = typeof(global::BK20.DataConverter1);
+            _typeTable[18] = typeof(global::System.Object);
+            _typeTable[19] = typeof(global::BK20.DataConverter2);
+            _typeTable[20] = typeof(global::BK20.ViewPage);
+            _typeTable[21] = typeof(global::BK20.WebPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -210,19 +214,21 @@ namespace BK20.BK20_XamlTypeInfo
         }
 
         private object Activate_0_AboutPage() { return new global::BK20.AboutPage(); }
-        private object Activate_3_BlankPage() { return new global::BK20.BlankPage(); }
-        private object Activate_4_MessageShow() { return new global::BK20.MessageShow(); }
-        private object Activate_5_ColumnPage() { return new global::BK20.ColumnPage(); }
-        private object Activate_6_FavouritePage() { return new global::BK20.FavouritePage(); }
-        private object Activate_7_InfoPage() { return new global::BK20.InfoPage(); }
-        private object Activate_8_LoginPage() { return new global::BK20.LoginPage(); }
-        private object Activate_9_WrapPanel() { return new global::AppArrange.WrapPanel.WrapPanel(); }
-        private object Activate_13_MainPage() { return new global::BK20.MainPage(); }
-        private object Activate_14_RankPage() { return new global::BK20.RankPage(); }
-        private object Activate_15_DataConverter1() { return new global::BK20.DataConverter1(); }
-        private object Activate_17_DataConverter2() { return new global::BK20.DataConverter2(); }
-        private object Activate_18_ViewPage() { return new global::BK20.ViewPage(); }
-        private object Activate_19_WebPage() { return new global::BK20.WebPage(); }
+        private object Activate_3_MessageShow() { return new global::BK20.MessageShow(); }
+        private object Activate_4_AVNightPage() { return new global::BK20.AVNightPage(); }
+        private object Activate_5_BlankPage() { return new global::BK20.BlankPage(); }
+        private object Activate_6_ColumnPage() { return new global::BK20.ColumnPage(); }
+        private object Activate_7_FavouritePage() { return new global::BK20.FavouritePage(); }
+        private object Activate_8_InfoPage() { return new global::BK20.InfoPage(); }
+        private object Activate_9_LoginPage() { return new global::BK20.LoginPage(); }
+        private object Activate_10_WrapPanel() { return new global::AppArrange.WrapPanel.WrapPanel(); }
+        private object Activate_14_MainPage() { return new global::BK20.MainPage(); }
+        private object Activate_15_PlayerPage() { return new global::BK20.PlayerPage(); }
+        private object Activate_16_RankPage() { return new global::BK20.RankPage(); }
+        private object Activate_17_DataConverter1() { return new global::BK20.DataConverter1(); }
+        private object Activate_19_DataConverter2() { return new global::BK20.DataConverter2(); }
+        private object Activate_20_ViewPage() { return new global::BK20.ViewPage(); }
+        private object Activate_21_WebPage() { return new global::BK20.WebPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -249,51 +255,58 @@ namespace BK20.BK20_XamlTypeInfo
                 xamlType = new global::BK20.BK20_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  BK20.BlankPage
-                userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_BlankPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  BK20.MessageShow
+            case 3:   //  BK20.MessageShow
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_4_MessageShow;
+                userType.Activator = Activate_3_MessageShow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  BK20.ColumnPage
+            case 4:   //  BK20.AVNightPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_ColumnPage;
+                userType.Activator = Activate_4_AVNightPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  BK20.FavouritePage
+            case 5:   //  BK20.BlankPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_FavouritePage;
+                userType.Activator = Activate_5_BlankPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  BK20.InfoPage
+            case 6:   //  BK20.ColumnPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_InfoPage;
+                userType.Activator = Activate_6_ColumnPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  BK20.LoginPage
+            case 7:   //  BK20.FavouritePage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_LoginPage;
+                userType.Activator = Activate_7_FavouritePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  AppArrange.WrapPanel.WrapPanel
+            case 8:   //  BK20.InfoPage
+                userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_InfoPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  BK20.LoginPage
+                userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  AppArrange.WrapPanel.WrapPanel
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
-                userType.Activator = Activate_9_WrapPanel;
+                userType.Activator = Activate_10_WrapPanel;
                 userType.AddMemberName("ItemHeight");
                 userType.AddMemberName("ItemWidth");
                 userType.AddMemberName("Orientation");
@@ -301,60 +314,67 @@ namespace BK20.BK20_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Windows.UI.Xaml.Controls.Panel
+            case 11:   //  Windows.UI.Xaml.Controls.Panel
                 xamlType = new global::BK20.BK20_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Double
+            case 12:   //  Double
                 xamlType = new global::BK20.BK20_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.Orientation
+            case 13:   //  Windows.UI.Xaml.Controls.Orientation
                 xamlType = new global::BK20.BK20_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  BK20.MainPage
+            case 14:   //  BK20.MainPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_MainPage;
+                userType.Activator = Activate_14_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  BK20.RankPage
+            case 15:   //  BK20.PlayerPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_RankPage;
+                userType.Activator = Activate_15_PlayerPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  BK20.DataConverter1
+            case 16:   //  BK20.RankPage
+                userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_RankPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  BK20.DataConverter1
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_15_DataConverter1;
+                userType.Activator = Activate_17_DataConverter1;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Object
+            case 18:   //  Object
                 xamlType = new global::BK20.BK20_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  BK20.DataConverter2
+            case 19:   //  BK20.DataConverter2
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_17_DataConverter2;
+                userType.Activator = Activate_19_DataConverter2;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  BK20.ViewPage
+            case 20:   //  BK20.ViewPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_ViewPage;
+                userType.Activator = Activate_20_ViewPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  BK20.WebPage
+            case 21:   //  BK20.WebPage
                 userType = new global::BK20.BK20_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_WebPage;
+                userType.Activator = Activate_21_WebPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

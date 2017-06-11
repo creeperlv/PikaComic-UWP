@@ -9,11 +9,15 @@
     <RootPropertyPathName Name="KnobOnToOffOffset" />
     <RootPropertyPathName Name="KnobCurrentToOffOffset" />
     <RootPropertyPathName Name="KnobCurrentToOnOffset" />
+    <RootPropertyPathName Name="Pixelated" />
+    <RootPropertyPathName Name="duration" />
+    <RootPropertyPathName Name="id" />
+    <RootPropertyPathName Name="title" />
+    <RootPropertyPathName Name="cover" />
     <RootPropertyPathName Name="likesCount" />
     <RootPropertyPathName Name="cats" />
     <RootPropertyPathName Name="pagesCount" />
     <RootPropertyPathName Name="author" />
-    <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="thumb" />
     <RootPropertyPathName Name="image" />
     <RootPropertyPathName Name="commentsCount" />
@@ -367,6 +371,9 @@
       <RootProperty Name="UseSystemFocusVisuals" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPresenter">
       <RootProperty Name="RenderTransform" />
@@ -454,7 +461,12 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="BK20.AboutPage" />
-    <RootType FullName="BK20.BlankPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="QueryIcon" />
+      <RootProperty Name="PlaceholderText" />
+      <RootEvent Name="QuerySubmitted" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Visibility" />
       <RootProperty Name="Width" />
@@ -478,6 +490,8 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
+    <RootType FullName="BK20.AVNightPage" />
+    <RootType FullName="BK20.BlankPage" />
     <RootType FullName="BK20.ColumnPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Resources" />
@@ -522,6 +536,7 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Margin" />
@@ -552,12 +567,6 @@
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition">
       <RootProperty Name="Edge" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="QueryIcon" />
-      <RootProperty Name="PlaceholderText" />
-      <RootEvent Name="QuerySubmitted" />
-    </RootType>
     <RootType FullName="AppArrange.WrapPanel.WrapPanel" />
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
@@ -574,6 +583,11 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="BK20.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootProperty Name="AutoPlay" />
+    </RootType>
+    <RootType FullName="BK20.PlayerPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="BorderThickness" />

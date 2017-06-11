@@ -245,3 +245,13 @@ E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.xaml
 E:\UWP\BK20\BK20\obj\x86\Debug\FavouritePage.xbf
 E:\UWP\BK20\BK20\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
 E:\UWP\BK20\BK20\bin\x86\Debug\SQLite.Net.dll
+E:\UWP\BK20\BK20\bin\x86\Debug\AVNightPage.xbf
+E:\UWP\BK20\BK20\obj\x86\Debug\AVNightPage.g.i.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\AVNightPage.g.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\AVNightPage.xaml
+E:\UWP\BK20\BK20\obj\x86\Debug\AVNightPage.xbf
+E:\UWP\BK20\BK20\bin\x86\Debug\PlayerPage.xbf
+E:\UWP\BK20\BK20\obj\x86\Debug\PlayerPage.g.i.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\PlayerPage.g.cs
+E:\UWP\BK20\BK20\obj\x86\Debug\PlayerPage.xaml
+E:\UWP\BK20\BK20\obj\x86\Debug\PlayerPage.xbf
